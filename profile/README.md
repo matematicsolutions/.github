@@ -3,14 +3,14 @@
 > **Lokalne, RODO-safe narzędzia AI dla polskich kancelarii prawnych.**
 > Zero-cloud self-host. Audytowalne. Bring-your-own-model.
 
-Budujemy [**Patron**](https://github.com/matematicsolutions/patron) — agenta
+Budujemy [**Patron**](https://github.com/matematicsolutions/patron) - agenta
 AI, który nie opuszcza serwera kancelarii. Do niego dokładamy publiczne,
 otwarte konektory do polskiego prawa, które każdy może wpiąć w swój
 produkt.
 
-## Patron — agent AI dla kancelarii (AGPL-3.0)
+## Patron - agent AI dla kancelarii (AGPL-3.0)
 
-[**patron**](https://github.com/matematicsolutions/patron) — powłoka:
+[**patron**](https://github.com/matematicsolutions/patron) - powłoka:
 chat, dokumenty, audit trail z hash-chain (AI Act art. 12), Konstytucja AI
 do podpisu przez kancelarię, docker-compose ready, vendor-agnostic LLM
 (Gemini / Claude / Ollama lokalny).
@@ -30,9 +30,9 @@ URL, sądem / aktem, datą i identyfikatorem (ELI / CELEX / sygnatura).
 | [**mcp-krs**](https://github.com/matematicsolutions/mcp-krs) | Krajowy Rejestr Sądowy (MS) | `get_entity`, `get_entity_full`, `get_board` |
 | [**mcp-eu-sparql**](https://github.com/matematicsolutions/mcp-eu-sparql) | Prawo UE + CJEU (EUR-Lex / Cellar) | `search_by_celex`, `search_by_date_range`, `search_cjeu` |
 
-## Praxis — przewodniki dla kancelarii (CC BY-SA 4.0)
+## Praxis - przewodniki dla kancelarii (CC BY-SA 4.0)
 
-[**praxis**](https://github.com/matematicsolutions/praxis) —
+[**praxis**](https://github.com/matematicsolutions/praxis) -
 otwarte przewodniki praktyczne LegalTech i AI governance dla
 polskich kancelarii. Mapy, podręczniki, checklisty.
 
@@ -53,7 +53,7 @@ Szczegóły:
 
 Każda kancelaria stawiająca Patrona przeczyta i podpisze
 [**Konstytucję AI Patrona v1.1.0**](https://github.com/matematicsolutions/patron/blob/main/governance/CONSTITUTION.md)
-— 9 zasad, granice produktu, role (Administrator / Operator /
+- 9 zasad, granice produktu, role (Administrator / Operator /
 Inspektor), audyt, ewolucja. Mapa do AI Act, RODO i Zasad etyki
 adwokackiej / radcowskiej.
 
@@ -61,7 +61,7 @@ adwokackiej / radcowskiej.
 
 - **Strona**: [matematic.co](https://matematic.co)
 - **Email**: [kontakt@matematic.co](mailto:kontakt@matematic.co)
-- **LinkedIn**: [Wiesław Mazur](https://www.linkedin.com/in/wieslawmazur/)
+- **LinkedIn**: [Wiesław Mazur](https://www.linkedin.com/in/wies%C5%82aw-mazur-535428364/)
 
 ---
 
