@@ -50,6 +50,31 @@ patternu [legalopsconsulting/lpm-skills](https://github.com/legalopsconsulting/l
 (Apache 2.0 snapshot), treść przepisana pod polski model współpracy
 kancelaria-klient.
 
+## matematic-contract-review-pl - tabular review umów (Apache 2.0)
+
+[**matematic-contract-review-pl**](https://github.com/matematicsolutions/matematic-contract-review-pl) -
+otwarty skill Claude Code do **bulk audit umów** w polskiej
+kancelarii. Kopiujesz folder PDF/DOCX, definiujesz schemat kolumn
+(data podpisania, strony, klauzule, prawo właściwe), skill zwraca
+`.docx` z tabelą + czerwone flagi + cytaty źródłowe.
+
+Cztery zasady konstytucyjne v1.0.0: **RODO-safe by default**
+(pseudonimizacja PII PRZED każdym wywołaniem LLM, bezwzględnie),
+**multi-provider LLM** (Ollama lokalny default, Claude/Gemini/GPT
+opt-in - decyzja kancelarii), **cytat fizycznie obecny w tekście
+źródłowym** (mechaniczna walidacja substring match, halucynacja
+niemożliwa na warstwie struktury), **bez nazywania firm w summary**
+("Strona A", "Dostawca", "Klient").
+
+Use case: due diligence M&A (47 umów w 2h zamiast 2 tygodni
+juniora), audyt portfela kontraktów dostawczych, weryfikacja
+umów powierzenia danych (art. 28 RODO), przegląd NDA przed
+podpisaniem przez kancelarię. Cherry-pick patternu UX z
+[jamietso/Tabular_Review](https://github.com/jamietso/Tabular_Review)
+(MIT), treść napisana od zera pod polskie realia z eliminacją 4
+critical anti-patternów upstream (Gemini-only / API key w
+frontendzie / brak persistence / Apple-only deps).
+
 ## matematic-readiness - audyt gotowości kancelarii do AI (CC BY-SA 4.0)
 
 [**matematic-readiness**](https://github.com/matematicsolutions/matematic-readiness) -
