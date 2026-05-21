@@ -50,6 +50,27 @@ patternu [legalopsconsulting/lpm-skills](https://github.com/legalopsconsulting/l
 (Apache 2.0 snapshot), treść przepisana pod polski model współpracy
 kancelaria-klient.
 
+## matematic-readiness - audyt gotowości kancelarii do AI (CC BY-SA 4.0)
+
+[**matematic-readiness**](https://github.com/matematicsolutions/matematic-readiness) -
+otwarty pakiet do oceny gdzie polska kancelaria jest na drodze do
+bezpiecznego wdrożenia AI. **30 pytań w 5 polskich wymiarach** (RODO
+compliance / tajemnica zawodowa / AI Act gotowość / kompetencje
+zespołu / architektura techniczna), scoring 1-5 z uzasadnieniem,
+5-poziomowa mapa progresji (Eksplorator → Adopter → Konstruktor →
+Architekt → Orkiestrator). Pozycja kancelarii = **minimum z
+wymiarów**, nie średnia.
+
+Plus **framework Build vs Buy** z polskim kontekstem regulacyjnym - 8
+kryteriów z wagą, decision tree, porównanie 9 platform (Patron /
+Harvey / CoCounsel / Lexis AI / LEX AI / Legalis AI / Claude
+Enterprise / Microsoft 365 Copilot / Cline + Ollama), kalkulator TCO
+3-letniego dla 1-100 osób. Cherry-pick patternu
+[OneC0de/legal-ai-architect-toolkit](https://github.com/OneC0de/legal-ai-architect-toolkit)
+(MIT), wszystkie treści napisane od zera pod polskie ustawy
+zawodowe (art. 6 PoA, art. 3 URP), AI Act (CELEX 32024R1689), RODO
+oraz DPF.
+
 ## Dlaczego dual-license (AGPL + MIT)
 
 - **Powłoka Patron pod AGPL-3.0** chroni przed SaaS-ification. Kancelaria
