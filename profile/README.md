@@ -36,6 +36,20 @@ URL, sądem / aktem, datą i identyfikatorem (ELI / CELEX / sygnatura).
 otwarte przewodniki praktyczne LegalTech i AI governance dla
 polskich kancelarii. Mapy, podręczniki, checklisty.
 
+## lpm-pl - skille zarządzania portfelem spraw (Apache 2.0)
+
+[**lpm-pl**](https://github.com/matematicsolutions/lpm-pl) - otwarte
+skille AI dla polskiej kancelarii zarządzającej portfelem spraw. Trzy
+MVP composable: status raporty z RAG forward-looking,
+scope-change controller (wykrywa scope creep i generuje wniosek o
+rozszerzenie zakresu), rejestr RAID ryzyk (Risks / Assumptions /
+Issues / Decisions). Polskie realia billingu - stawki godzinowe,
+ryczałt, success fee z ograniczeniami art. 16 KEA. Output `.docx` z
+brand szablonem kancelarii. RODO-safe by default. Cherry-pick
+patternu [legalopsconsulting/lpm-skills](https://github.com/legalopsconsulting/lpm-skills)
+(Apache 2.0 snapshot), treść przepisana pod polski model współpracy
+kancelaria-klient.
+
 ## Dlaczego dual-license (AGPL + MIT)
 
 - **Powłoka Patron pod AGPL-3.0** chroni przed SaaS-ification. Kancelaria
