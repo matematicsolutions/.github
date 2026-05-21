@@ -92,6 +92,19 @@ Każda kancelaria stawiająca Patrona przeczyta i podpisze
 Inspektor), audyt, ewolucja. Mapa do AI Act, RODO i Zasad etyki
 adwokackiej / radcowskiej.
 
+## Standard agentów AI (AGENTS.md)
+
+Wszystkie publiczne repozytoria MateMatic mają plik [`AGENTS.md`](https://agents.md)
+w root - kanoniczne instrukcje dla agentów AI zgodne ze standardem
+**Linux Foundation / Agentic AI Foundation**. Czytany natywnie przez 20+
+narzędzi (Cursor, Codex OpenAI, Jules Google, Devin/Windsurf Cognition,
+Aider, Amp, Factory, GitHub Copilot, Claude Code).
+
+Dlaczego: Patron i konektory MCP mają być produktem **vendor-neutral** -
+żaden klient kancelarii ani deweloper nie powinien być przywiązany do
+jednego narzędzia AI, żeby z nimi pracować. AGENTS.md to ten sam argument
+w warstwie devexp.
+
 ## Kontakt
 
 - **Strona**: [matematic.co](https://matematic.co)
