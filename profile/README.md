@@ -121,10 +121,14 @@ oraz DPF.
 ## matematic-legal-verify-pl - weryfikacja outputu AI prawnego (Apache 2.0)
 
 [**matematic-legal-verify-pl**](https://github.com/matematicsolutions/matematic-legal-verify-pl) -
-trzy composable skille Claude Code, które pilnują, żeby wynik pracy AI
+cztery composable skille Claude Code, które pilnują, żeby wynik pracy AI
 nadawał się do wysłania do klienta lub sądu. Nie piszą pism - sprawdzają
 je, zanim wyjdą za drzwi.
 
+**legal-request-router-pl** - klasyfikator na wejściu: ocenia złożoność i
+ryzyko zapytania, dobiera proporcjonalną ścieżkę kontroli (zwykła odpowiedź /
+grounding / debata / paczka audytowa). Warstwa nad pozostałymi - chroni przed
+paleniem tokenów na rutynie i przed przepuszczeniem spraw wysokiej stawki.
 **citation-grounding-pl** - mechaniczny weryfikator cytatu: string-matchem
 sprawdza, czy każdy cytat z orzeczenia / ustawy / umowy faktycznie istnieje
 w źródle (normalizacja cudzysłowów i myślników, obsługa luk `[...]`). Brak
