@@ -75,6 +75,28 @@ podpisaniem przez kancelarię. Cherry-pick patternu UX z
 critical anti-patternów upstream (Gemini-only / API key w
 frontendzie / brak persistence / Apple-only deps).
 
+## matematic-anonimizacja-pl - anonimizacja danych "Let It Be" (Apache 2.0)
+
+[**matematic-anonimizacja-pl**](https://github.com/matematicsolutions/matematic-anonimizacja-pl) -
+samodzielny silnik **anonimizacji i pseudonimizacji polskich danych
+osobowych** w tekście. Zero zależności, offline, deterministyczny -
+treść nie opuszcza maszyny. Wykrywa PESEL/NIP/REGON/KRS, IBAN/NRB
+(checksuma mod-97), dowód osobisty, e-mail, telefon, imiona i nazwiska
+(gazetteer imion), firmy z formą prawną i adresy.
+
+Dwa tryby RODO: **anonimizacja nieodwracalna** (mapa nie powstaje, motyw
+26 - dane poza RODO) oraz **pseudonimizacja odwracalna** (mapa
+token-oryginał, art. 4 pkt 5 - do pracy z LLM i odzyskania wyniku).
+Bramka "no PII leaves" przerywa operację, gdy oryginał przetrwał
+podmianę. Trzy interfejsy: skill Claude Code, CLI, biblioteka.
+
+To wydzielona, osobno testowana warstwa pseudonimizacji, której wymaga
+`matematic-contract-review-pl` (PII PRZED każdym wywołaniem LLM).
+Logika polskich identyfikatorów pochodzi z własnej biblioteki
+pl-entities (Patron); wzorce operacyjne (TTL na mapy, audit log dla
+Inspektora, szyfrowane archiwum AES-GCM) to cherry-pick patternu z
+[gregmos/PII-Shield](https://github.com/gregmos/PII-Shield) (MIT).
+
 ## matematic-readiness - audyt gotowości kancelarii do AI (CC BY-SA 4.0)
 
 [**matematic-readiness**](https://github.com/matematicsolutions/matematic-readiness) -
