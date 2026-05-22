@@ -121,7 +121,7 @@ oraz DPF.
 ## matematic-legal-verify-pl - weryfikacja outputu AI prawnego (Apache 2.0)
 
 [**matematic-legal-verify-pl**](https://github.com/matematicsolutions/matematic-legal-verify-pl) -
-pięć composable skilli Claude Code, które pilnują, żeby praca z AI była
+sześć composable skilli Claude Code, które pilnują, żeby praca z AI była
 rzetelna od wejścia do wyjścia. Nie piszą pism - sprawdzają wejście i wynik,
 zanim cokolwiek pójdzie do klienta lub sądu.
 
@@ -140,7 +140,10 @@ konektorami mcp-saos / mcp-nsa / mcp-eu-sparql (pobranie źródła).
 **adversarial-legal-review-pl** - kontradyktoryjny stress-test pisma
 wysokiej stawki (builder buduje tezę, attacker atakuje kontr-orzecznictwem,
 synthesizer godzi, verifier robi kontrolę 10-punktową), z bramką kosztu -
-tylko dla high-stakes, nie dla rutyny. **legal-ai-audit-bundle** - paczka
+tylko dla high-stakes, nie dla rutyny. **deliverable-fidelity-pl** -
+weryfikator wierności: czy finalny dokument oddaje ustalenia analizy (żadna
+flaga RED nie wypadła z podsumowania); mechaniczny check + kontrola wyrywkowa
+LLM, pominięte RED = blokada. **legal-ai-audit-bundle** - paczka
 audytowa: deliverable + ślad rozumowania + raport cytatów + log kosztu w
 jednym folderze z manifestem i hashami SHA256, artefakt zgodny z AI Act
 art. 12 (rejestry), art. 14 (nadzór), art. 50 (poinformowanie o AI).
