@@ -118,6 +118,31 @@ Enterprise / Microsoft 365 Copilot / Cline + Ollama), kalkulator TCO
 zawodowe (art. 6 PoA, art. 3 URP), AI Act (CELEX 32024R1689), RODO
 oraz DPF.
 
+## matematic-legal-verify-pl - weryfikacja outputu AI prawnego (Apache 2.0)
+
+[**matematic-legal-verify-pl**](https://github.com/matematicsolutions/matematic-legal-verify-pl) -
+trzy composable skille Claude Code, które pilnują, żeby wynik pracy AI
+nadawał się do wysłania do klienta lub sądu. Nie piszą pism - sprawdzają
+je, zanim wyjdą za drzwi.
+
+**citation-grounding-pl** - mechaniczny weryfikator cytatu: string-matchem
+sprawdza, czy każdy cytat z orzeczenia / ustawy / umowy faktycznie istnieje
+w źródle (normalizacja cudzysłowów i myślników, obsługa luk `[...]`). Brak
+trafienia = potencjalna halucynacja = blokada publikacji. Spina się z
+konektorami mcp-saos / mcp-nsa / mcp-eu-sparql (pobranie źródła).
+**adversarial-legal-review-pl** - kontradyktoryjny stress-test pisma
+wysokiej stawki (builder buduje tezę, attacker atakuje kontr-orzecznictwem,
+synthesizer godzi, verifier robi kontrolę 10-punktową), z bramką kosztu -
+tylko dla high-stakes, nie dla rutyny. **legal-ai-audit-bundle** - paczka
+audytowa: deliverable + ślad rozumowania + raport cytatów + log kosztu w
+jednym folderze z manifestem i hashami SHA256, artefakt zgodny z AI Act
+art. 12 (rejestry), art. 14 (nadzór), art. 50 (poinformowanie o AI).
+
+Skrypty w czystym Node (zero zależności), działają lokalnie. Mapa
+pseudonimizacji nigdy nie trafia do paczki (art. 4 pkt 5 RODO). Cherry-pick
+patternu z [AnttiHero/lavern](https://github.com/AnttiHero/lavern)
+(Apache 2.0), kod i prompty napisane od zera pod polskie realia.
+
 ## Dlaczego dual-license (AGPL + MIT)
 
 - **Powłoka Patron pod AGPL-3.0** chroni przed SaaS-ification. Kancelaria
