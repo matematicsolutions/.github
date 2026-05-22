@@ -196,7 +196,7 @@ Szczegóły:
 ## Konstytucja AI
 
 Każda kancelaria stawiająca Patrona przeczyta i podpisze
-[**Konstytucję AI Patrona v1.1.0**](https://github.com/matematicsolutions/patron/blob/main/governance/CONSTITUTION.md)
+[**Konstytucję AI Patrona v1.2.0**](https://github.com/matematicsolutions/patron/blob/main/governance/CONSTITUTION.md)
 - 9 zasad, granice produktu, role (Administrator / Operator /
 Inspektor), audyt, ewolucja. Mapa do AI Act, RODO i Zasad etyki
 adwokackiej / radcowskiej.
