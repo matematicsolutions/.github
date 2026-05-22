@@ -150,6 +150,33 @@ pseudonimizacji nigdy nie trafia do paczki (art. 4 pkt 5 RODO). Cherry-pick
 patternu z [AnttiHero/lavern](https://github.com/AnttiHero/lavern)
 (Apache 2.0), kod i prompty napisane od zera pod polskie realia.
 
+## matematic-pomoc-prawna-pl - plugin dla pomocy prawnej (Apache 2.0)
+
+[**matematic-pomoc-prawna-pl**](https://github.com/matematicsolutions/matematic-pomoc-prawna-pl) -
+otwarty plugin Claude Code dla **polskiej nieodpłatnej pomocy prawnej,
+klinik prawa, fundacji i NGO** prowadzących poradnictwo. Przyspiesza pracę
+*wokół* poradnictwa - kwalifikacja zgłoszenia, ustrukturyzowane przyjęcie
+sprawy, pierwszy szkic pisma, szkielet analizy IRAC - aby ten sam zespół
+obsłużył więcej osób. Nie zastępuje prawnika; każdy wynik to szkic do
+analizy i nadzoru.
+
+Kręgosłup nadzoru i weryfikacji: **7 artykułów konstytucji projektu**,
+polskie markery pewności (`[DO WERYFIKACJI]`, `[POTRZEBNE BADANIE]`,
+`[ANALIZA PRAWNIKA]`, `[OGRANICZENIE RODO/AI ACT]`), **trzy konfigurowalne
+modele nadzoru koordynatora**, ślad audytowy AI Act art. 12. Kluczowa
+zasada: **skille nie zaszywają prawa** - czytają konfigurację organizacji
+ustawioną przy starcie, więc plugin działa wg aktualnych przepisów i
+realiów konkretnej organizacji, nie wg reguł wbudowanych w kod.
+
+**MateMatic dostarcza narzędzie, nie usługę prawną** - nie świadczy pomocy
+prawnej, nie jest kancelarią, nie udziela porad. Odpowiedzialność
+merytoryczna i nadzór są po stronie organizacji i jej uprawnionych
+prawników. Wzorzec architektoniczny studiowany z
+[anthropics/claude-for-legal](https://github.com/anthropics/claude-for-legal)
+(Apache-2.0) i [lawdroidAI/legal-aid-plugin](https://github.com/lawdroidAI/legal-aid-plugin)
+(Apache-2.0), cała treść polska napisana od zera. Wydane otwarcie, aby każdy
+punkt npp, klinika prawa, fundacja i NGO mogły wdrożyć je za darmo.
+
 ## Dlaczego dual-license (AGPL + MIT)
 
 - **Powłoka Patron pod AGPL-3.0** chroni przed SaaS-ification. Kancelaria

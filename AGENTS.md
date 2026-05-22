@@ -57,6 +57,7 @@ Brak kompilacji. "Test" = otworz `https://github.com/matematicsolutions` po push
 | [matematic-anonimizacja-pl](https://github.com/matematicsolutions/matematic-anonimizacja-pl) | Apache 2.0 | v0.1.0-alpha |
 | [matematic-readiness](https://github.com/matematicsolutions/matematic-readiness) | CC BY-SA 4.0 | v0.1.0-alpha |
 | [matematic-legal-verify-pl](https://github.com/matematicsolutions/matematic-legal-verify-pl) | Apache 2.0 | v0.3.0-alpha |
+| [matematic-pomoc-prawna-pl](https://github.com/matematicsolutions/matematic-pomoc-prawna-pl) | Apache 2.0 | v0.1.0-alpha |
 | [praxis](https://github.com/matematicsolutions/praxis) | CC BY-SA 4.0 | aktywny |
 | [mcp-saos](https://github.com/matematicsolutions/mcp-saos) | MIT | stable |
 | [mcp-nsa](https://github.com/matematicsolutions/mcp-nsa) | MIT | stable |
