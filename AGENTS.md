@@ -65,6 +65,7 @@ Brak kompilacji. "Test" = otworz `https://github.com/matematicsolutions` po push
 | [mcp-krs](https://github.com/matematicsolutions/mcp-krs) | MIT | stable |
 | [mcp-eu-sparql](https://github.com/matematicsolutions/mcp-eu-sparql) | MIT | stable |
 | [mcp-eu-compliance](https://github.com/matematicsolutions/mcp-eu-compliance) | MIT | v0.1.0 |
+| [awesome-matematic-skills-pl](https://github.com/matematicsolutions/awesome-matematic-skills-pl) | MIT | v0.1.0 |
 
 ## Kompatybilnosc agentow
 
