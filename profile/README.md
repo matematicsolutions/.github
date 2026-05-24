@@ -15,7 +15,7 @@ chat, dokumenty, audit trail z hash-chain (AI Act art. 12), Konstytucja AI
 do podpisu przez kancelarię, docker-compose ready, vendor-agnostic LLM
 (Gemini / Claude / Ollama lokalny).
 
-## 5 konektorów MCP polskiego i unijnego prawa (MIT)
+## 6 konektorów MCP polskiego i unijnego prawa (MIT)
 
 Każdy konektor to osobny serwer MCP (stdio transport). Wpina się przez
 `mcp-servers.json` w dowolnym produkcie zgodnym z protokołem. Każde
@@ -29,6 +29,7 @@ URL, sądem / aktem, datą i identyfikatorem (ELI / CELEX / sygnatura).
 | [**mcp-isap**](https://github.com/matematicsolutions/mcp-isap) | Legislacja PL (Dz.U. + M.P., Sejm ELI) | `search_acts`, `get_act`, `get_act_text` |
 | [**mcp-krs**](https://github.com/matematicsolutions/mcp-krs) | Krajowy Rejestr Sądowy (MS) | `get_entity`, `get_entity_full`, `get_board` |
 | [**mcp-eu-sparql**](https://github.com/matematicsolutions/mcp-eu-sparql) | Prawo UE + CJEU (EUR-Lex / Cellar) | `search_by_celex`, `search_by_date_range`, `search_cjeu` |
+| [**mcp-eu-compliance**](https://github.com/matematicsolutions/mcp-eu-compliance) | Compliance UE offline - GDPR, AI Act, DORA, NIS2, eIDAS 2.0, CRA (verbatim z lokalnego SQLite FTS5) | `eu_search`, `eu_article`, `eu_compare`, `eu_check_applicability`, `eu_evidence` |
 
 ## Praxis - przewodniki dla kancelarii (CC BY-SA 4.0)
 
@@ -186,7 +187,7 @@ punkt npp, klinika prawa, fundacja i NGO mogły wdrożyć je za darmo.
   self-host nie ma żadnych dodatkowych obowiązków. Konkurent
   oferujący Patrona jako SaaS dla osób trzecich musi otworzyć
   modyfikacje.
-- **5 konektorów MCP pod MIT** to infrastruktura do publicznych źródeł
+- **6 konektorów MCP pod MIT** to infrastruktura do publicznych źródeł
   prawa. Im więcej osób je używa, tym bardziej stają się standardem
   zwracania cytatów z polskiego prawa.
 

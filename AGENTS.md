@@ -17,7 +17,7 @@ To **nie jest produkt** - to wizytowka organizacji widoczna w pierwszej kolejnos
 
 Org profile README ma byc:
 
-- **Mapa portfolio** - aktualna lista wszystkich publicznych repo (Patron + 5 mcp-* + lpm-pl + matematic-readiness + praxis + .github + kolejne).
+- **Mapa portfolio** - aktualna lista wszystkich publicznych repo (Patron + 6 mcp-* + lpm-pl + matematic-readiness + praxis + .github + kolejne).
 - **Pozycjonowanie marki** - "Made by Poland. For Polish law firms." - tagline na koncu.
 - **Bez sales pitch** - GitHub czyta technical buyer (CTO / IT kancelarii), nie partner zarzadzajacy. Argument: "podpisana Konstytucja AI", "AGPL-3.0 chroni przed SaaS-ification", "hash-chain AI Act art. 12" - nie "zwiekszamy efektywnosc o 40%".
 
@@ -64,6 +64,7 @@ Brak kompilacji. "Test" = otworz `https://github.com/matematicsolutions` po push
 | [mcp-isap](https://github.com/matematicsolutions/mcp-isap) | MIT | stable |
 | [mcp-krs](https://github.com/matematicsolutions/mcp-krs) | MIT | stable |
 | [mcp-eu-sparql](https://github.com/matematicsolutions/mcp-eu-sparql) | MIT | stable |
+| [mcp-eu-compliance](https://github.com/matematicsolutions/mcp-eu-compliance) | MIT | v0.1.0 |
 
 ## Kompatybilnosc agentow
 

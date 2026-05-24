@@ -6,5 +6,5 @@ Zawiera:
 - `profile/README.md` — publiczna wizytówka organizacji, renderowana
   u góry strony <https://github.com/matematicsolutions>.
 
-Wszystkie nasze produkty (Patron + 5 konektorów MCP + Praxis) żyją
+Wszystkie nasze produkty (Patron + 6 konektorów MCP + Praxis) żyją
 w osobnych repozytoriach z osobnymi LICENSE.
