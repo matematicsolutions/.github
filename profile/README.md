@@ -181,6 +181,25 @@ prawników. Wzorzec architektoniczny studiowany z
 (Apache-2.0), cała treść polska napisana od zera. Wydane otwarcie, aby każdy
 punkt npp, klinika prawa, fundacja i NGO mogły wdrożyć je za darmo.
 
+## awesome-matematic-skills-pl - hub kuratorski skilli AI (MIT)
+
+[**awesome-matematic-skills-pl**](https://github.com/matematicsolutions/awesome-matematic-skills-pl) -
+kuratorska lista i pakiet 14 umiejętności Agent Skills dla polskiej praktyki
+kancelaryjnej, in-house, naukowej i NGO. Format zgodny z
+[Agent Skills](https://github.com/anthropics/skills) (Anthropic, otwarty
+standard) - skille działają w Claude Code, Claude Cowork, Claude.ai,
+OpenAI Codex CLI, Gemini CLI, Manus, Mistral Vibe.
+
+Repo porządkuje sześć warstw weryfikacji outputu LLM dla pisma prawnego
+w jeden łańcuch (intake → router → grounding → adversarial → fidelity →
+audit-bundle), dokłada redline DOCX z natywnymi Word Track Changes,
+warstwę orzecznictwa PL/UE (SAOS, EU SPARQL), konwerter PDF/Word/PPT
+do Markdown oraz `humanizer-pl` - 29 wzorców AI-slop w polszczyźnie.
+
+`.claude-plugin/marketplace.json` w root - jeden install w Claude Code
+instaluje cały pakiet 14 skilli. Otwarte na PR od polskich prawników,
+in-house counseli i naukowców prawa - patrz CONTRIBUTING.md.
+
 ## Dlaczego dual-license (AGPL + MIT)
 
 - **Powłoka Patron pod AGPL-3.0** chroni przed SaaS-ification. Kancelaria
