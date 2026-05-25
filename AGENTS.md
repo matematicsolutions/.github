@@ -39,7 +39,7 @@ Brak kompilacji. "Test" = otworz `https://github.com/matematicsolutions` po push
 - **Linkuj kazdy repo z listy** - aktualizuj `profile/README.md` przy KAZDYM nowym publicznym repo organizacji.
 - **Bez em-dash** - uzywaj `-`.
 - **Bez polskich znakow w commit messages**.
-- **Marko-pl review** przed commitem jezeli zmiana > 5 linii tresci marketingowej.
+- **Wewnetrzny senior review** przed commitem jezeli zmiana > 5 linii tresci marketingowej.
 
 ## Czego NIE robic (twarde reguly)
 

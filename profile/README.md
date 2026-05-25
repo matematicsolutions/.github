@@ -193,11 +193,11 @@ OpenAI Codex CLI, Gemini CLI, Manus, Mistral Vibe.
 Repo porządkuje sześć warstw weryfikacji outputu LLM dla pisma prawnego
 w jeden łańcuch (intake → router → grounding → adversarial → fidelity →
 audit-bundle), dokłada redline DOCX z natywnymi Word Track Changes,
-warstwę orzecznictwa PL/UE (SAOS, EU SPARQL), konwerter PDF/Word/PPT
-do Markdown oraz `humanizer-pl` - 29 wzorców AI-slop w polszczyźnie.
+warstwę orzecznictwa PL/UE (SAOS, EU SPARQL) oraz konwerter
+PDF/Word/PPT do Markdown.
 
 `.claude-plugin/marketplace.json` w root - jeden install w Claude Code
-instaluje cały pakiet 14 skilli. Otwarte na PR od polskich prawników,
+instaluje cały pakiet skilli. Otwarte na PR od polskich prawników,
 in-house counseli i naukowców prawa - patrz CONTRIBUTING.md.
 
 ## Dlaczego dual-license (AGPL + MIT)
