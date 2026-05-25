@@ -4,9 +4,9 @@
 > Zero-cloud self-host. Audytowalne. Bring-your-own-model.
 
 Budujemy [**Patron**](https://github.com/matematicsolutions/patron) - agenta
-AI, który nie opuszcza serwera kancelarii. Do niego dokładamy publiczne,
-otwarte konektory do polskiego prawa, które każdy może wpiąć w swój
-produkt.
+AI, który nie opuszcza serwera kancelarii. Wokół Patrona udostępniamy
+publiczne, otwarte konektory do polskiego prawa, które każdy może
+wpiąć w swój produkt.
 
 ## Patron - agent AI dla kancelarii (AGPL-3.0)
 
@@ -41,10 +41,11 @@ polskich kancelarii. Mapy, podręczniki, checklisty.
 
 [**lpm-pl**](https://github.com/matematicsolutions/lpm-pl) - otwarte
 skille AI dla polskiej kancelarii zarządzającej portfelem spraw. Trzy
-MVP composable: status raporty z RAG forward-looking,
-scope-change controller (wykrywa scope creep i generuje wniosek o
-rozszerzenie zakresu), rejestr RAID ryzyk (Risks / Assumptions /
-Issues / Decisions). Polskie realia billingu - stawki godzinowe,
+moduły, które można łączyć: cotygodniowe raporty z oceną czerwony /
+żółty / zielony i prognozą na następny tydzień, kontroler zmian
+zakresu (wykrywa scope creep i generuje wniosek o rozszerzenie
+zakresu), rejestr RAID - ryzyka, założenia, problemy otwarte i
+decyzje. Polskie realia billingu - stawki godzinowe,
 ryczałt, success fee z ograniczeniami art. 16 KEA. Output `.docx` z
 brand szablonem kancelarii. RODO-safe by default. Cherry-pick
 patternu [legalopsconsulting/lpm-skills](https://github.com/legalopsconsulting/lpm-skills)
@@ -106,7 +107,7 @@ bezpiecznego wdrożenia AI. **30 pytań w 5 polskich wymiarach** (RODO
 compliance / tajemnica zawodowa / AI Act gotowość / kompetencje
 zespołu / architektura techniczna), scoring 1-5 z uzasadnieniem,
 5-poziomowa mapa progresji (Poznający → Próbujący → Wdrażający →
-Projektant → Architekt całości). Pozycja kancelarii = **minimum z
+Integrator → Architekt). Pozycja kancelarii = **minimum z
 wymiarów**, nie średnia.
 
 Plus **framework Build vs Buy** z polskim kontekstem regulacyjnym - 8
@@ -150,7 +151,7 @@ audytowa: deliverable + ślad rozumowania + raport cytatów + log kosztu w
 jednym folderze z manifestem i hashami SHA256, artefakt zgodny z AI Act
 art. 12 (rejestry), art. 14 (nadzór), art. 50 (poinformowanie o AI).
 
-Skrypty w czystym Node (zero zależności), działają lokalnie. Mapa
+Skrypty wyłącznie na Node, bez zewnętrznych zależności, działają lokalnie. Mapa
 pseudonimizacji nigdy nie trafia do paczki (art. 4 pkt 5 RODO). Cherry-pick
 patternu z [AnttiHero/lavern](https://github.com/AnttiHero/lavern)
 (Apache 2.0), kod i prompty napisane od zera pod polskie realia.
