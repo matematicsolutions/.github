@@ -67,10 +67,10 @@ opt-in - decyzja kancelarii), **cytat fizycznie obecny w tekście
 niemożliwa na warstwie struktury), **bez nazywania firm w summary**
 ("Strona A", "Dostawca", "Klient").
 
-Use case: due diligence M&A (47 umów w 2h zamiast 2 tygodni
-juniora), audyt portfela kontraktów dostawczych, weryfikacja
-umów powierzenia danych (art. 28 RODO), przegląd NDA przed
-podpisaniem przez kancelarię. Cherry-pick patternu UX z
+Use case: due diligence M&A na większym portfelu umów, audyt
+portfela kontraktów dostawczych, weryfikacja umów powierzenia
+danych (art. 28 RODO), przegląd NDA przed podpisaniem przez
+kancelarię. Cherry-pick patternu UX z
 [jamietso/Tabular_Review](https://github.com/jamietso/Tabular_Review)
 (MIT), treść napisana od zera pod polskie realia z eliminacją 4
 critical anti-patternów upstream (Gemini-only / API key w
@@ -105,15 +105,16 @@ otwarty pakiet do oceny gdzie polska kancelaria jest na drodze do
 bezpiecznego wdrożenia AI. **30 pytań w 5 polskich wymiarach** (RODO
 compliance / tajemnica zawodowa / AI Act gotowość / kompetencje
 zespołu / architektura techniczna), scoring 1-5 z uzasadnieniem,
-5-poziomowa mapa progresji (Eksplorator → Adopter → Konstruktor →
-Architekt → Orkiestrator). Pozycja kancelarii = **minimum z
+5-poziomowa mapa progresji (Poznający → Próbujący → Wdrażający →
+Projektant → Architekt całości). Pozycja kancelarii = **minimum z
 wymiarów**, nie średnia.
 
 Plus **framework Build vs Buy** z polskim kontekstem regulacyjnym - 8
-kryteriów z wagą, decision tree, porównanie 9 platform (Patron /
-Harvey / CoCounsel / Lexis AI / LEX AI / Legalis AI / Claude
-Enterprise / Microsoft 365 Copilot / Cline + Ollama), kalkulator TCO
-3-letniego dla 1-100 osób. Cherry-pick patternu
+kryteriów z wagą, decision tree i porównanie 9 platform - lokalnych
+(Patron, LEX AI, Legalis AI), zachodnich agentów prawnych (Harvey,
+CoCounsel, Lexis AI) i platform ogólnego przeznaczenia (Claude
+Enterprise, Microsoft 365 Copilot, Cline + Ollama). Plus kalkulator
+TCO 3-letniego dla 1-100 osób. Cherry-pick patternu
 [OneC0de/legal-ai-architect-toolkit](https://github.com/OneC0de/legal-ai-architect-toolkit)
 (MIT), wszystkie treści napisane od zera pod polskie ustawy
 zawodowe (art. 6 PoA, art. 3 URP), AI Act (CELEX 32024R1689), RODO
@@ -158,11 +159,11 @@ patternu z [AnttiHero/lavern](https://github.com/AnttiHero/lavern)
 
 [**matematic-pomoc-prawna-pl**](https://github.com/matematicsolutions/matematic-pomoc-prawna-pl) -
 otwarty plugin Claude Code dla **polskiej nieodpłatnej pomocy prawnej,
-klinik prawa, fundacji i NGO** prowadzących poradnictwo. Przyspiesza pracę
-*wokół* poradnictwa - kwalifikacja zgłoszenia, ustrukturyzowane przyjęcie
-sprawy, pierwszy szkic pisma, szkielet analizy IRAC - aby ten sam zespół
-obsłużył więcej osób. Nie zastępuje prawnika; każdy wynik to szkic do
-analizy i nadzoru.
+klinik prawa, fundacji i NGO** prowadzących poradnictwo. Przyspiesza
+pracę pomocniczą wokół poradnictwa - kwalifikacja zgłoszenia,
+ustrukturyzowane przyjęcie sprawy, pierwszy szkic pisma, szkielet
+analizy IRAC - aby ten sam zespół obsłużył więcej osób. Nie zastępuje
+prawnika; każdy wynik to szkic do analizy i nadzoru.
 
 Kręgosłup nadzoru i weryfikacji: **7 artykułów konstytucji projektu**,
 polskie markery pewności (`[DO WERYFIKACJI]`, `[POTRZEBNE BADANIE]`,
@@ -184,7 +185,7 @@ punkt npp, klinika prawa, fundacja i NGO mogły wdrożyć je za darmo.
 ## awesome-matematic-skills-pl - hub kuratorski skilli AI (MIT)
 
 [**awesome-matematic-skills-pl**](https://github.com/matematicsolutions/awesome-matematic-skills-pl) -
-kuratorska lista i pakiet 14 umiejętności Agent Skills dla polskiej praktyki
+kuratorska lista i pakiet 18 umiejętności Agent Skills dla polskiej praktyki
 kancelaryjnej, in-house, naukowej i NGO. Format zgodny z
 [Agent Skills](https://github.com/anthropics/skills) (Anthropic, otwarty
 standard) - skille działają w Claude Code, Claude Cowork, Claude.ai,
@@ -242,5 +243,4 @@ w warstwie devexp.
 
 ---
 
-*Made by Poland. For Polish law firms.
-Audytowalne, lokalne, vendor-neutral.*
+*Z Polski. Dla polskich kancelarii. Audytowalne, lokalne, vendor-neutral.*
