@@ -186,7 +186,7 @@ punkt npp, klinika prawa, fundacja i NGO mogły wdrożyć je za darmo.
 ## awesome-matematic-skills-pl - hub kuratorski skilli AI (MIT)
 
 [**awesome-matematic-skills-pl**](https://github.com/matematicsolutions/awesome-matematic-skills-pl) -
-kuratorska lista i pakiet 18 umiejętności Agent Skills dla polskiej praktyki
+kuratorska lista i pakiet 22 umiejętności Agent Skills dla polskiej praktyki
 kancelaryjnej, in-house, naukowej i NGO. Format zgodny z
 [Agent Skills](https://github.com/anthropics/skills) (Anthropic, otwarty
 standard) - skille działają w Claude Code, Claude Cowork, Claude.ai,
