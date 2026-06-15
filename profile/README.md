@@ -238,7 +238,7 @@ w warstwie devexp.
 
 ## Kontakt
 
-- **Strona**: [matematic.co](https://matematic.co)
+- **Strona**: [matematicsolutions.com](https://matematicsolutions.com)
 - **Email**: [kontakt@matematic.co](mailto:kontakt@matematic.co)
 - **LinkedIn**: [Wiesław Mazur](https://www.linkedin.com/in/wies%C5%82aw-mazur-535428364/)
 
