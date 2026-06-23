@@ -1,5 +1,15 @@
 # MateMatic Solutions
 
+🇬🇧 **English** · 🇵🇱 **Polski poniżej ↓** · [matematicsolutions.com/en](https://matematicsolutions.com/en/)
+
+> **Local, GDPR-safe AI tooling for law firms.** Zero-cloud self-host. Auditable. Bring-your-own-model.
+
+We build **[Patron](https://github.com/matematicsolutions/patron)** - an AI agent that never leaves the firm's server - plus open, public MCP connectors to Polish and EU law that anyone can plug into their own product. European LegalTech infrastructure: the data stays where the duty of confidentiality lives. English overview: **[matematicsolutions.com/en](https://matematicsolutions.com/en/)**.
+
+*The catalogue below is in Polish, our home market.*
+
+---
+
 > **Lokalne, RODO-safe narzędzia AI dla polskich kancelarii prawnych.**
 > Zero-cloud self-host. Audytowalne. Bring-your-own-model.
 
