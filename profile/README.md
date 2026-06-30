@@ -59,6 +59,13 @@ API (keyless lub kluczowane), RODO-safe.
 | [**se-eli-mcp**](https://github.com/matematicsolutions/se-eli-mcp) | 🇸🇪 Szwecja | Riksdagen (open-data) | Statuty SFS |
 | [**ie-eli-mcp**](https://github.com/matematicsolutions/ie-eli-mcp) | 🇮🇪 Irlandia | Irish Statute Book | Akty i SI (ELI) |
 | [**lu-eli-mcp**](https://github.com/matematicsolutions/lu-eli-mcp) | 🇱🇺 Luksemburg | Legilux (jolux RDF) | ELI-native + Akoma Ntoso |
+| [**dk-eli-mcp**](https://github.com/matematicsolutions/dk-eli-mcp) | 🇩🇰 Dania | Retsinformation (LexDania XML) | Legislacja (ELI) |
+| [**cz-eli-mcp**](https://github.com/matematicsolutions/cz-eli-mcp) | 🇨🇿 Czechy | e-Sbirka (SPARQL / RDF) | Legislacja (ELI narodowe) |
+| [**hr-eli-mcp**](https://github.com/matematicsolutions/hr-eli-mcp) | 🇭🇷 Chorwacja | Narodne novine (JSON-LD) | Legislacja (ELI europejskie) |
+| [**lt-eli-mcp**](https://github.com/matematicsolutions/lt-eli-mcp) | 🇱🇹 Litwa | TAR / data.gov.lt (Spinta) | Legislacja (pełny tekst) |
+| [**sk-eli-mcp**](https://github.com/matematicsolutions/sk-eli-mcp) | 🇸🇰 Słowacja | Slov-Lex (static) | Legislacja (ELI narodowe) |
+| [**ro-eli-mcp**](https://github.com/matematicsolutions/ro-eli-mcp) | 🇷🇴 Rumunia | Portal Legislativ (SOAP) | Legislacja (pełny tekst) |
+| [**mt-eli-mcp**](https://github.com/matematicsolutions/mt-eli-mcp) | 🇲🇹 Malta | Legislation.mt (ELI + PDF) | Legislacja (ELI narodowe) |
 
 Plus [**kio-orzeczenia-mcp**](https://github.com/matematicsolutions/kio-orzeczenia-mcp)
 (Apache-2.0) - orzeczenia Krajowej Izby Odwoławczej (zamówienia publiczne),
