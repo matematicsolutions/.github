@@ -17,7 +17,7 @@ To **nie jest produkt** - to wizytowka organizacji widoczna w pierwszej kolejnos
 
 Org profile README ma byc:
 
-- **Mapa portfolio** - aktualna lista wszystkich publicznych repo (Patron + 6 mcp-* + lpm-pl + matematic-readiness + praxis + .github + kolejne).
+- **Mapa portfolio** - aktualna lista wszystkich publicznych repo: Patron (7 edycji jezykowych - PL/EN/BR/IT/DE/ES/FR), konektory MCP PL i poziomu UE, 41-konektorowa flota eu-legal-mcp (Europa/Ameryki/Azja-Pacyfik), dwa huby skilli (PL/EN), lpm-pl, matematic-readiness, praxis, .github, kolejne.
 - **Pozycjonowanie marki** - "Made by Poland. For Polish law firms." - tagline na koncu.
 - **Bez sales pitch** - GitHub czyta technical buyer (CTO / IT kancelarii), nie partner zarzadzajacy. Argument: "podpisana Konstytucja AI", "AGPL-3.0 chroni przed SaaS-ification", "hash-chain AI Act art. 12" - nie "zwiekszamy efektywnosc o 40%".
 
@@ -49,29 +49,45 @@ Brak kompilacji. "Test" = otworz `https://github.com/matematicsolutions` po push
 
 ## Powiazane repo (utrzymuj synchronizacje)
 
-| Repo | Licencja | Status |
-|---|---|---|
-| [patron](https://github.com/matematicsolutions/patron) | AGPL-3.0 | aktywny rozwoj |
-| [lpm-pl](https://github.com/matematicsolutions/lpm-pl) | Apache 2.0 | v0.2.0-alpha |
-| [matematic-contract-review-pl](https://github.com/matematicsolutions/matematic-contract-review-pl) | Apache 2.0 | v0.1.0-alpha |
-| [matematic-anonimizacja-pl](https://github.com/matematicsolutions/matematic-anonimizacja-pl) | Apache 2.0 | v0.1.0-alpha |
-| [matematic-readiness](https://github.com/matematicsolutions/matematic-readiness) | CC BY-SA 4.0 | v0.1.0-alpha |
-| [matematic-legal-verify-pl](https://github.com/matematicsolutions/matematic-legal-verify-pl) | Apache 2.0 | v0.4.0-alpha |
-| [matematic-pomoc-prawna-pl](https://github.com/matematicsolutions/matematic-pomoc-prawna-pl) | Apache 2.0 | v0.1.0-alpha |
-| [praxis](https://github.com/matematicsolutions/praxis) | CC BY-SA 4.0 | aktywny |
-| [mcp-saos](https://github.com/matematicsolutions/mcp-saos) | MIT | stable |
-| [mcp-nsa](https://github.com/matematicsolutions/mcp-nsa) | MIT | stable |
-| [mcp-isap](https://github.com/matematicsolutions/mcp-isap) | MIT | stable |
-| [mcp-krs](https://github.com/matematicsolutions/mcp-krs) | MIT | stable |
-| [mcp-eu-sparql](https://github.com/matematicsolutions/mcp-eu-sparql) | MIT | stable |
-| [mcp-eu-compliance](https://github.com/matematicsolutions/mcp-eu-compliance) | MIT | v0.1.0 |
-| [awesome-matematic-skills-pl](https://github.com/matematicsolutions/awesome-matematic-skills-pl) | MIT | v0.1.0 |
+Ta tabela to repo "produktowe" - Patron, huby skilli, konektory pierwszej
+fali (PL + poziom UE). Pelna flota 41 konektorow eu-legal-mcp (Europa,
+Ameryki, Azja i Pacyfik) NIE jest tu duplikowana wiersz po wierszu -
+zrodlem prawdy dla pelnej listy z linkami jest `profile/README.md`.
+
+| Repo | Licencja | Status | AGENTS.md |
+|---|---|---|---|
+| [patron](https://github.com/matematicsolutions/patron) | AGPL-3.0 | aktywny rozwoj, 7 edycji jezykowych | tak |
+| [lpm-pl](https://github.com/matematicsolutions/lpm-pl) | Apache 2.0 | v0.2.0-alpha | tak |
+| [matematic-contract-review-pl](https://github.com/matematicsolutions/matematic-contract-review-pl) | Apache 2.0 | v0.1.0-alpha | tak |
+| [matematic-anonimizacja-pl](https://github.com/matematicsolutions/matematic-anonimizacja-pl) | Apache 2.0 | v0.1.0-alpha | tak |
+| [matematic-readiness](https://github.com/matematicsolutions/matematic-readiness) | CC BY-SA 4.0 | v0.1.0-alpha | tak |
+| [matematic-legal-verify-pl](https://github.com/matematicsolutions/matematic-legal-verify-pl) | Apache 2.0 | v0.4.0-alpha | tak |
+| [matematic-pomoc-prawna-pl](https://github.com/matematicsolutions/matematic-pomoc-prawna-pl) | Apache 2.0 | v0.1.0-alpha | nie (CLAUDE.md) |
+| [praxis](https://github.com/matematicsolutions/praxis) | CC BY-SA 4.0 | aktywny | tak |
+| [awesome-matematic-skills-pl](https://github.com/matematicsolutions/awesome-matematic-skills-pl) | MIT | 35 skilli + kuratorskie | tak |
+| [awesome-matematic-skills-en](https://github.com/matematicsolutions/awesome-matematic-skills-en) | MIT | 18 skilli + kuratorskie | nie |
+| [mcp-saos](https://github.com/matematicsolutions/mcp-saos) | MIT | stable | tak |
+| [mcp-nsa](https://github.com/matematicsolutions/mcp-nsa) | MIT | stable | tak |
+| [mcp-isap](https://github.com/matematicsolutions/mcp-isap) | MIT | stable | tak |
+| [mcp-krs](https://github.com/matematicsolutions/mcp-krs) | MIT | stable | tak |
+| [mcp-eu-sparql](https://github.com/matematicsolutions/mcp-eu-sparql) | MIT | stable | tak |
+| [mcp-eu-compliance](https://github.com/matematicsolutions/mcp-eu-compliance) | MIT | stable | tak |
+| [mcp-fr-legal](https://github.com/matematicsolutions/mcp-fr-legal) | Apache-2.0 | offline korpus | tak |
+| [kio-orzeczenia-mcp](https://github.com/matematicsolutions/kio-orzeczenia-mcp) | Apache-2.0 | wczesny POC | nie (CONSTITUTION.md + DISCOVERY.md) |
+| [legalize-mcp](https://github.com/matematicsolutions/legalize-mcp) | Apache-2.0 | 32 jurysdykcje | nie (CONSTITUTION.md + DISCOVERY.md) |
+| [eu-drift-watch](https://github.com/matematicsolutions/eu-drift-watch) | Apache-2.0 | monitoring, nie konektor | nie |
 
 ## Kompatybilnosc agentow
 
 Standard [AGENTS.md](https://agents.md). Dla Claude Code dodatkowo plik [CLAUDE.md](./CLAUDE.md).
 
-Wszystkie publiczne repo MateMatic maja `AGENTS.md` w roocie (od 2026-05-21) - patrz tabela.
+Repo produktowe i konektory pierwszej fali (PL + poziom UE, od 2026-05-21)
+maja `AGENTS.md` w rocie - patrz kolumna w tabeli, NIE jest to uniwersalne
+dla calej organizacji. Flota eu-legal-mcp (generowana wlasnym pipeline'em
+od 2026-07-01, 32 konektory) ma zamiast tego `CONSTITUTION.md` +
+`DISCOVERY.md` w kazdym repo - inny format, ten sam cel. `awesome-matematic-skills-en`
+i `matematic-pomoc-prawna-pl` maja wlasna strukture (odpowiednio: brak
+osobnego pliku governance / `CLAUDE.md`).
 
 ## Licencja
 

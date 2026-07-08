@@ -26,6 +26,15 @@ chat, dokumenty, audit trail z hash-chain (AI Act art. 12), Konstytucja AI
 do podpisu przez kancelarię, docker-compose ready, vendor-agnostic LLM
 (Gemini / Claude / Ollama lokalny).
 
+Jedno repo, jeden [release](https://github.com/matematicsolutions/patron/releases),
+siedem instalatorów Windows - **PL, EN, BR, IT, DE, ES, FR**. Każda wersja ma
+domyślnie wpięty lokalny konektor prawa swojego rynku (Polska: SAOS/NSA/ISAP/KRS,
+Brazylia: legis.senado.leg.br + DataJud CNJ, Włochy: Normattiva, Niemcy: NeuRIS,
+Hiszpania: BOE, Francja: Legifrance/PISTE - wymaga darmowego klucza PISTE; EN to
+wydanie unijne, agent po angielsku z EUR-Lex na pierwszym planie). Pozostałe
+konektory dobiera się osobno z Boutique. Pobranie i szczegóły per wersja:
+[matematicsolutions.com/pobierz](https://matematicsolutions.com/pobierz).
+
 ## Konektory MCP - 41 konektorów, 32 jurysdykcje, 10 mln+ dokumentów źródłowych
 
 Każdy konektor to osobny serwer MCP (stdio transport, `uvx`/`npx` lub
@@ -312,18 +321,24 @@ Każda kancelaria stawiająca Patrona przeczyta i podpisze
 Inspektor), audyt, ewolucja. Mapa do AI Act, RODO i Zasad etyki
 adwokackiej / radcowskiej.
 
-## Standard agentów AI (AGENTS.md)
+## Standard agentów AI (AGENTS.md / CONSTITUTION.md)
 
-Wszystkie publiczne repozytoria MateMatic mają plik [`AGENTS.md`](https://agents.md)
-w root - kanoniczne instrukcje dla agentów AI zgodne ze standardem
-**Linux Foundation / Agentic AI Foundation**. Czytany natywnie przez 20+
-narzędzi (Cursor, Codex OpenAI, Jules Google, Devin/Windsurf Cognition,
-Aider, Amp, Factory, GitHub Copilot, Claude Code).
+Patron, oba huby skilli i konektory pierwszej fali (PL + poziom UE) mają
+plik [`AGENTS.md`](https://agents.md) w root - kanoniczne instrukcje dla
+agentów AI zgodne ze standardem **Linux Foundation / Agentic AI Foundation**.
+Czytany natywnie przez 20+ narzędzi (Cursor, Codex OpenAI, Jules Google,
+Devin/Windsurf Cognition, Aider, Amp, Factory, GitHub Copilot, Claude Code).
+
+Linia eu-legal-mcp (konektory generowane własnym pipeline'em od lipca 2026)
+ma ten sam cel w dwóch osobnych plikach zamiast jednego: `CONSTITUTION.md`
+(granice i zasady konektora) i `DISCOVERY.md` (źródło, licencja,
+ograniczenia pokrycia). Inny format, ta sama funkcja - agent czyta zasady
+repo, zanim zacznie na nim pracować.
 
 Dlaczego: Patron i konektory MCP mają być produktem **vendor-neutral** -
 żaden klient kancelarii ani deweloper nie powinien być przywiązany do
-jednego narzędzia AI, żeby z nimi pracować. AGENTS.md to ten sam argument
-w warstwie devexp.
+jednego narzędzia AI, żeby z nimi pracować. To ten sam argument w warstwie
+devexp.
 
 ## Kontakt
 
