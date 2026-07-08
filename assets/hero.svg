@@ -27,8 +27,8 @@
   </g>
 
   <!-- wordmark -->
-  <text x="640" y="90" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
-        font-size="16" letter-spacing="6" fill="#8b93a1">MATEMATIC&#160;&#160;SOLUTIONS</text>
+  <text x="640" y="90" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="15" letter-spacing="6" font-weight="500" fill="#8b93a1">MATEMATIC&#160;&#160;SOLUTIONS</text>
 
   <!-- headline -->
   <text x="640" y="196" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
@@ -37,13 +37,13 @@
         font-size="64" fill="#f5f5f4">what it doesn&#8217;t know.</text>
 
   <!-- tagline -->
-  <text x="640" y="318" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
-        font-size="19" letter-spacing="9" font-weight="bold" fill="#34d399">WE&#160;KNOW&#160;HOW</text>
+  <text x="640" y="318" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="18" letter-spacing="10" font-weight="600" fill="#34d399">WE&#160;KNOW&#160;HOW</text>
 
   <!-- rule -->
   <rect x="440" y="356" width="400" height="1.5" fill="url(#rule)"/>
 
   <!-- subtitle -->
-  <text x="640" y="392" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
-        font-size="15.5" fill="#9aa3b2">Grounded legal-AI infrastructure&#160;&#160;&#183;&#160;&#160;41 open MCP connectors&#160;&#160;&#183;&#160;&#160;32 jurisdictions&#160;&#160;&#183;&#160;&#160;30M+ source documents</text>
+  <text x="640" y="392" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="14.5" letter-spacing="0.3" fill="#9aa3b2">Grounded legal-AI infrastructure&#160;&#160;&#183;&#160;&#160;41 open MCP connectors&#160;&#160;&#183;&#160;&#160;32 jurisdictions&#160;&#160;&#183;&#160;&#160;30M+ source documents</text>
 </svg>
