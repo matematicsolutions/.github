@@ -1,354 +1,201 @@
-# MateMatic Solutions
+<div align="center">
 
-🇬🇧 **English** · 🇵🇱 **Polski poniżej ↓** · [matematicsolutions.com/en](https://matematicsolutions.com/en/)
+<a href="https://matematicsolutions.com/en/">
+  <img src="https://raw.githubusercontent.com/matematicsolutions/.github/main/assets/hero.svg" alt="MateMatic Solutions - AI that knows what it doesn't know. We know how." width="100%">
+</a>
 
-> **Local, GDPR-safe AI tooling for law firms.** Zero-cloud self-host. Auditable. Bring-your-own-model.
+<br>
 
-We build **[Patron](https://github.com/matematicsolutions/patron)** - an AI agent that never leaves the firm's server - plus **41 open MCP connectors** to public sources of law across 32 jurisdictions (Europe, the Americas, Asia-Pacific) and two open skill hubs for Claude Code / Cowork. European LegalTech infrastructure: the data stays where the duty of confidentiality lives. English overview: **[matematicsolutions.com/en](https://matematicsolutions.com/en/)** · full connector and skill catalogue: **[matematicsolutions.com/en/boutique](https://matematicsolutions.com/en/boutique)**.
+**Open, grounded legal-AI infrastructure for law firms - anywhere the law is public.** Self-hosted. Auditable. Vendor-neutral.
 
-*The catalogue below is in Polish, our home market.*
+[![MCP connectors](https://img.shields.io/badge/MCP_connectors-41-1E3A5F?style=flat-square)](https://matematicsolutions.com/en/boutique)
+[![Jurisdictions](https://img.shields.io/badge/jurisdictions-32-6C717A?style=flat-square)](https://matematicsolutions.com/en/boutique)
+[![Source documents](https://img.shields.io/badge/source_documents-30M%2B-D4A537?style=flat-square)](https://matematicsolutions.com/en/boutique)
+[![Skills](https://img.shields.io/badge/Claude_skills-59-10b981?style=flat-square)](https://github.com/matematicsolutions/awesome-matematic-skills-en)
+[![License](https://img.shields.io/badge/license-AGPL_%2B_MIT_%2F_Apache-334155?style=flat-square)](#why-open-source)
+
+[Website](https://matematicsolutions.com/en/) · [Boutique catalogue](https://matematicsolutions.com/en/boutique) · [Download Patron](https://matematicsolutions.com/en/pobierz) · [LinkedIn](https://www.linkedin.com/in/wies%C5%82aw-mazur-535428364/)
+
+</div>
 
 ---
 
-> **Lokalne, RODO-safe narzędzia AI dla polskich kancelarii prawnych.**
-> Zero-cloud self-host. Audytowalne. Bring-your-own-model.
+## The idea
 
-Budujemy [**Patron**](https://github.com/matematicsolutions/patron) - agenta
-AI, który nie opuszcza serwera kancelarii. Wokół Patrona udostępniamy
-publiczne, otwarte konektory MCP do prawa i dwa huby skilli Claude Code -
-każdy może je wpiąć w swój produkt. Pełny katalog, aktualizowany na bieżąco:
-[matematicsolutions.com/boutique](https://matematicsolutions.com/boutique).
+Legal AI has one dominant failure mode: a confident, well-written citation to a case or statute that does not exist. In a law firm, that is not a glitch - it is malpractice.
 
-## Patron - agent AI dla kancelarii (AGPL-3.0)
+So we build the opposite. Every tool in this fleet returns a **verifiable citation** - title, URL, court or act, date, and a stable identifier (ELI / ECLI / CELEX / docket number) - resolved live against the public source. The model does not recall the law from memory; it fetches it, and it can show you where every word came from. Citation checks run as mechanical string-matches, so a fabricated quote fails at the structural layer, before it ever reaches a client.
 
-[**patron**](https://github.com/matematicsolutions/patron) - powłoka:
-chat, dokumenty, audit trail z hash-chain (AI Act art. 12), Konstytucja AI
-do podpisu przez kancelarię, docker-compose ready, vendor-agnostic LLM
-(Gemini / Claude / Ollama lokalny).
+**AI that knows what it doesn't know** - and hands you the source instead of guessing.
 
-Jedno repo, jeden [release](https://github.com/matematicsolutions/patron/releases),
-dziewięć instalatorów Windows - **PL, EN, US, GB, BR, IT, DE, ES, FR**. Każda wersja ma
-domyślnie wpięty lokalny konektor prawa swojego rynku (Polska: SAOS/NSA/ISAP/KRS,
-USA: Congress.gov/GovInfo/Federal Register/eCFR/CourtListener, Wielka Brytania:
-legislation.gov.uk/Find Case Law/GOV.UK Search, Brazylia: legis.senado.leg.br +
-DataJud CNJ, Włochy: Normattiva, Niemcy: NeuRIS, Hiszpania: BOE, Francja:
-Legifrance/PISTE - wymaga darmowego klucza PISTE; EN to wydanie unijne, agent po
-angielsku z EUR-Lex na pierwszym planie). Pozostałe
-konektory dobiera się osobno z Boutique. Pobranie i szczegóły per wersja:
-[matematicsolutions.com/pobierz](https://matematicsolutions.com/pobierz).
+---
 
-## Konektory MCP - 41 konektorów, 32 jurysdykcje, 30 mln+ dokumentów źródłowych
+## What we ship
 
-Każdy konektor to osobny serwer MCP (stdio transport, `uvx`/`npx` lub
-sklonowanie repo). Każde wywołanie narzędzia zwraca `structuredContent.citations`
-z tytułem, URL, sądem / aktem, datą i identyfikatorem (ELI / ECLI / CELEX /
-sygnatura). Trzy kontynenty: Europa, Ameryki, Azja i Pacyfik. Pełny,
-na bieżąco aktualizowany katalog z instrukcją instalacji każdego konektora:
-[matematicsolutions.com/boutique/konektory](https://matematicsolutions.com/boutique/konektory).
-
-### Polska (MIT / Apache-2.0)
-
-| Konektor | Domena | Licencja |
+| | | |
 |---|---|---|
-| [**mcp-isap**](https://github.com/matematicsolutions/mcp-isap) | Legislacja PL (Dz.U. + M.P., Sejm ELI) - 96 tys.+ aktów od 1918 r. | MIT |
-| [**mcp-saos**](https://github.com/matematicsolutions/mcp-saos) | Sądy powszechne i Sąd Najwyższy (baza SAOS) | MIT |
-| [**mcp-nsa**](https://github.com/matematicsolutions/mcp-nsa) | Sądy administracyjne (NSA + 16 WSA, CBOSA) | MIT |
-| [**mcp-krs**](https://github.com/matematicsolutions/mcp-krs) | Krajowy Rejestr Sądowy (oficjalne, darmowe API MS) | MIT |
-| [**kio-orzeczenia-mcp**](https://github.com/matematicsolutions/kio-orzeczenia-mcp) | Krajowa Izba Odwoławcza, zamówienia publiczne (wczesny POC) | Apache-2.0 |
+| **[Patron](https://github.com/matematicsolutions/patron)** | An AI agent that never leaves the firm's server | 9 desktop editions |
+| **MCP connector fleet** | Grounded, keyless-first access to public law | 41 connectors · 32 jurisdictions |
+| **Two skill hubs** | Method-neutral legal-AI skills for Claude Code / Cursor / Codex | 59 skills |
+| **[Boutique](https://matematicsolutions.com/en/boutique)** | Install-ready catalogue of every connector and skill | Always current |
 
-### Prawo UE - poziom unijny (MIT)
+All of it is open source, and all of it runs on the firm's own hardware, with the model of its choice - Claude, Gemini, or a local Ollama.
 
-| Konektor | Domena |
-|---|---|
-| [**mcp-eu-sparql**](https://github.com/matematicsolutions/mcp-eu-sparql) | Legislacja UE + orzecznictwo TSUE (EUR-Lex / Cellar SPARQL) |
-| [**mcp-eu-compliance**](https://github.com/matematicsolutions/mcp-eu-compliance) | Offline korpus 14 regulacji UE - RODO, AI Act, DORA, NIS2, DSA, DMA, Data Act, CRA i dalej (lokalny SQLite FTS5, verbatim, zero-LLM) |
+---
 
-### Linia eu-legal-mcp - Europa, kraj po kraju (Apache-2.0)
+## Patron - the agent that stays inside the firm
 
-Jeden serwer MCP na krajowe źródło prawa, ten sam kontrakt cytowań co
-konektory PL - `eli_uri` / ECLI, `human_readable_citation`, `source_url`.
-Obejmuje kraje UE oraz trzy kraje spoza Unii, które kancelaria dotyka
-w sprawach transgranicznych - Szwajcaria, Wielka Brytania, Turcja.
+**[patron](https://github.com/matematicsolutions/patron)** (AGPL-3.0) is a self-hosted legal-AI shell: chat, documents, a hash-chained audit trail (EU AI Act art. 12), an **AI Constitution** the firm reads and signs, `docker-compose` ready, and a vendor-agnostic model layer. The data stays where the duty of confidentiality lives.
 
-| Kraj | Konektor | Źródło |
+One repository, one [release](https://github.com/matematicsolutions/patron/releases), **nine Windows installers** - PL, EN, US, GB, BR, IT, DE, ES, FR. Each ships with its own market's law connector wired in by default (US: Congress.gov / GovInfo / Federal Register / eCFR / CourtListener · UK: legislation.gov.uk / Find Case Law / GOV.UK · Brazil: Senado + DataJud CNJ · and so on; the EN build is the EU edition, with EUR-Lex in front). Download and per-edition detail: **[matematicsolutions.com/en/pobierz](https://matematicsolutions.com/en/pobierz)**.
+
+---
+
+## Flagship connectors
+
+Each is a standalone MCP server (stdio, `uvx` / `npx`, or clone-and-run). Featured first are our four highest-coverage markets; the full catalogue by region follows.
+
+### 🇺🇸 United States - [`us-eli-mcp`](https://github.com/matematicsolutions/us-eli-mcp)
+
+Five sources, ten tools. **Congress.gov** (the federal legislative process) · **GovInfo** (US Code, Statutes at Large, CFR, Federal Register packages) · **Federal Register** (1,003,504 documents, including 1,550 executive orders, keyless) · **CourtListener** (**8,294,123 court opinions** - the headline value is state case law for California, New York, Texas and beyond, which no federal source covers) · **eCFR** (412,846 current CFR sections with amendment history). Apache-2.0.
+
+### 🇧🇷 Brazil - [`br-eli-mcp`](https://github.com/matematicsolutions/br-eli-mcp)
+
+Eight keyless, no-registration open-data APIs. Federal bills (Camara dos Deputados) · enacted law via the real LexML URN resolver (Senado) · full article text (normas.leg.br) · court dockets across all branches (**DataJud CNJ**) · rulings from the STJ, **TST** (labor supreme court - 3,751,594 rulings), **TCU** (federal court of accounts, procurement - 525,620 rulings) and **CARF** (federal tax appeals). Apache-2.0.
+
+### 🇪🇺 European Union - [`mcp-eu-sparql`](https://github.com/matematicsolutions/mcp-eu-sparql) + [`mcp-eu-compliance`](https://github.com/matematicsolutions/mcp-eu-compliance)
+
+Live EU legislation and **57,103 CJEU rulings and Advocate-General opinions** (34,261 judgments, 8,362 orders, 14,480 opinions) via the Publications Office SPARQL endpoint (Cellar / EUR-Lex), each with CELEX + ECLI, plus national data-protection decisions from GDPRhub. Alongside it, an **offline** verbatim corpus of 14 digital-and-data regulations - GDPR, AI Act, DORA, NIS2, eIDAS 2.0, CRA, DSA, DMA, Data Act, DGA, LED, ePrivacy, Cybersecurity Act, CER - in local SQLite FTS5, zero-LLM, every snippet CELEX-stamped. MIT.
+
+### 🇬🇧 United Kingdom - [`gb-eli-mcp`](https://github.com/matematicsolutions/gb-eli-mcp)
+
+**legislation.gov.uk** (The National Archives) - Acts of Parliament and Statutory Instruments across Westminster, Holyrood, the Senedd and Stormont - plus **Find Case Law** (UK judgments as Akoma Ntoso) and the **GOV.UK Search API** (tribunal decisions, HMRC manuals, CMA cases). Eight tools, keyless, Open Government Licence v3.0. Britain pioneered URI-based legislation identifiers, so `eli_uri` carries the UK's own stable id. Apache-2.0.
+
+---
+
+## The full fleet - 32 jurisdictions across three continents
+
+Every connector returns the same citation contract: `eli_uri` / ECLI / CELEX, a human-readable citation, and a `source_url`. Install instructions for each, always current: **[matematicsolutions.com/en/boutique](https://matematicsolutions.com/en/boutique)**.
+
+### Europe (ordered by legal-market size)
+
+| | Connector | Source |
 |---|---|---|
-| 🇦🇹 Austria | [at-eli-mcp](https://github.com/matematicsolutions/at-eli-mcp) | RIS (data.bka.gv.at) - legislacja + Judikatur |
-| 🇧🇪 Belgia | [be-eli-mcp](https://github.com/matematicsolutions/be-eli-mcp) | Moniteur Belge / Belgisch Staatsblad |
-| 🇨🇭 Szwajcaria | [ch-eli-mcp](https://github.com/matematicsolutions/ch-eli-mcp) | Fedlex - natywny ELI, DE/FR/IT/EN |
-| 🇨🇿 Czechy | [cz-eli-mcp](https://github.com/matematicsolutions/cz-eli-mcp) | e-Sbirka (SPARQL/RDF) |
-| 🇩🇪 Niemcy | [de-eli-mcp](https://github.com/matematicsolutions/de-eli-mcp) | NeuRIS (rechtsinformationen.bund.de) - legislacja + orzecznictwo |
-| 🇩🇰 Dania | [dk-eli-mcp](https://github.com/matematicsolutions/dk-eli-mcp) | Retsinformation (LexDania XML) |
-| 🇪🇸 Hiszpania | [es-eli-mcp](https://github.com/matematicsolutions/es-eli-mcp) | BOE (boe.es) |
-| 🇫🇮 Finlandia | [fi-eli-mcp](https://github.com/matematicsolutions/fi-eli-mcp) | Finlex (Akoma Ntoso) |
-| 🇫🇷 Francja | [fr-eli-mcp](https://github.com/matematicsolutions/fr-eli-mcp) | Legifrance / PISTE - LODA, kodeksy, JURI (ECLI); wymaga darmowego konta PISTE |
-| 🇬🇧 Wielka Brytania | [gb-eli-mcp](https://github.com/matematicsolutions/gb-eli-mcp) | legislation.gov.uk (The National Archives, bez klucza) |
-| 🇭🇷 Chorwacja | [hr-eli-mcp](https://github.com/matematicsolutions/hr-eli-mcp) | Narodne novine (JSON-LD) |
-| 🇭🇺 Węgry | [hu-eli-mcp](https://github.com/matematicsolutions/hu-eli-mcp) | Nemzeti Jogszabálytár |
-| 🇮🇪 Irlandia | [ie-eli-mcp](https://github.com/matematicsolutions/ie-eli-mcp) | Irish Statute Book |
-| 🇮🇹 Włochy | [it-eli-mcp](https://github.com/matematicsolutions/it-eli-mcp) | Normattiva (Akoma Ntoso / URN:NIR / ELI) + Corte Costituzionale od 1956 |
-| 🇱🇹 Litwa | [lt-eli-mcp](https://github.com/matematicsolutions/lt-eli-mcp) | TAR / data.gov.lt (Spinta) |
-| 🇱🇺 Luksemburg | [lu-eli-mcp](https://github.com/matematicsolutions/lu-eli-mcp) | Legilux - jolux RDF + Akoma Ntoso |
+| 🇩🇪 Germany | [de-eli-mcp](https://github.com/matematicsolutions/de-eli-mcp) | NeuRIS - federal legislation + case law at every court level + Bundestag DIP |
+| 🇫🇷 France | [fr-eli-mcp](https://github.com/matematicsolutions/fr-eli-mcp) | Legifrance / PISTE - LODA, codes, JURI case law (ECLI); free PISTE key |
+| 🇮🇹 Italy | [it-eli-mcp](https://github.com/matematicsolutions/it-eli-mcp) | Normattiva (Akoma Ntoso / URN:NIR / ELI) + Corte Costituzionale from 1956 |
+| 🇪🇸 Spain | [es-eli-mcp](https://github.com/matematicsolutions/es-eli-mcp) | BOE, Tribunal Constitucional, DGT tax rulings, TEAC doctrine, AEPD |
+| 🇳🇱 Netherlands | [nl-eli-mcp](https://github.com/matematicsolutions/nl-eli-mcp) | BWB (KOOP SRU) + Rechtspraak Open Data |
+| 🇨🇭 Switzerland | [ch-eli-mcp](https://github.com/matematicsolutions/ch-eli-mcp) | Fedlex - native ELI, DE / FR / IT / EN |
+| 🇸🇪 Sweden | [se-eli-mcp](https://github.com/matematicsolutions/se-eli-mcp) | Riksdagen open data (SFS) |
+| 🇧🇪 Belgium | [be-eli-mcp](https://github.com/matematicsolutions/be-eli-mcp) | Moniteur Belge / Belgisch Staatsblad |
+| 🇦🇹 Austria | [at-eli-mcp](https://github.com/matematicsolutions/at-eli-mcp) | RIS (data.bka.gv.at) - legislation + Judikatur |
+| 🇮🇪 Ireland | [ie-eli-mcp](https://github.com/matematicsolutions/ie-eli-mcp) | Irish Statute Book |
+| 🇩🇰 Denmark | [dk-eli-mcp](https://github.com/matematicsolutions/dk-eli-mcp) | Retsinformation (LexDania XML) |
+| 🇫🇮 Finland | [fi-eli-mcp](https://github.com/matematicsolutions/fi-eli-mcp) | Finlex (Akoma Ntoso) |
+| 🇨🇿 Czechia | [cz-eli-mcp](https://github.com/matematicsolutions/cz-eli-mcp) | e-Sbirka (SPARQL / RDF) |
+| 🇷🇴 Romania | [ro-eli-mcp](https://github.com/matematicsolutions/ro-eli-mcp) | Portal Legislativ (SOAP) |
+| 🇭🇺 Hungary | [hu-eli-mcp](https://github.com/matematicsolutions/hu-eli-mcp) | Nemzeti Jogszabalytar |
+| 🇭🇷 Croatia | [hr-eli-mcp](https://github.com/matematicsolutions/hr-eli-mcp) | Narodne novine (JSON-LD) |
+| 🇸🇰 Slovakia | [sk-eli-mcp](https://github.com/matematicsolutions/sk-eli-mcp) | Slov-Lex (static) |
+| 🇱🇹 Lithuania | [lt-eli-mcp](https://github.com/matematicsolutions/lt-eli-mcp) | TAR / data.gov.lt (Spinta) |
+| 🇱🇺 Luxembourg | [lu-eli-mcp](https://github.com/matematicsolutions/lu-eli-mcp) | Legilux - jolux RDF + Akoma Ntoso |
 | 🇲🇹 Malta | [mt-eli-mcp](https://github.com/matematicsolutions/mt-eli-mcp) | legislation.mt |
-| 🇳🇱 Holandia | [nl-eli-mcp](https://github.com/matematicsolutions/nl-eli-mcp) | BWB (KOOP SRU) + Rechtspraak Open Data |
-| 🇷🇴 Rumunia | [ro-eli-mcp](https://github.com/matematicsolutions/ro-eli-mcp) | Portal Legislativ (SOAP) |
-| 🇸🇪 Szwecja | [se-eli-mcp](https://github.com/matematicsolutions/se-eli-mcp) | Riksdagen open-data (SFS) |
-| 🇸🇰 Słowacja | [sk-eli-mcp](https://github.com/matematicsolutions/sk-eli-mcp) | Slov-Lex (static) |
-| 🇹🇷 Turcja | [tr-eli-mcp](https://github.com/matematicsolutions/tr-eli-mcp) | Mevzuat Bilgi Sistemi / Bedesten (keyless), bez orzecznictwa |
+| 🇹🇷 Turkey | [tr-eli-mcp](https://github.com/matematicsolutions/tr-eli-mcp) | Mevzuat Bilgi Sistemi / Bedesten (keyless) |
 
-Plus [**mcp-fr-legal**](https://github.com/matematicsolutions/mcp-fr-legal)
-(Apache-2.0) - offline korpus pełnego tekstu francuskich kodów i ustaw
-(Legifrance/DILA, lokalny SQLite FTS5, zero-LLM, bez klucza) - uzupełnia
-`fr-eli-mcp`, który działa live przez PISTE i obejmuje orzecznictwo.
+Plus [`mcp-fr-legal`](https://github.com/matematicsolutions/mcp-fr-legal) - an offline full-text corpus of French codes and statutes (Legifrance / DILA, local SQLite, zero-LLM), companion to the live `fr-eli-mcp`.
 
-### Ameryki (Apache-2.0)
+### The Americas
 
-| Kraj | Konektor | Źródło |
+| | Connector | Source |
 |---|---|---|
-| 🇧🇷 Brazylia | [br-eli-mcp](https://github.com/matematicsolutions/br-eli-mcp) | Câmara dos Deputados - projekty ustaw federalnych, bez klucza |
-| 🇨🇦 Kanada | [ca-eli-mcp](https://github.com/matematicsolutions/ca-eli-mcp) | Justice Laws Website - legislacja federalna, dwujęzyczna |
+| 🇺🇸 United States | [us-eli-mcp](https://github.com/matematicsolutions/us-eli-mcp) | Congress.gov · GovInfo · Federal Register · CourtListener · eCFR *(flagship above)* |
+| 🇧🇷 Brazil | [br-eli-mcp](https://github.com/matematicsolutions/br-eli-mcp) | Camara · Senado · DataJud · STJ · TST · TCU · CARF *(flagship above)* |
+| 🇨🇦 Canada | [ca-eli-mcp](https://github.com/matematicsolutions/ca-eli-mcp) | Justice Laws Website - federal, bilingual |
 | 🇨🇱 Chile | [cl-eli-mcp](https://github.com/matematicsolutions/cl-eli-mcp) | BCN Linked Open Data (SPARQL) |
-| 🇨🇴 Kolumbia | [co-eli-mcp](https://github.com/matematicsolutions/co-eli-mcp) | Orzeczenia Trybunału Konstytucyjnego, bez klucza |
-| 🇺🇸 USA | [us-eli-mcp](https://github.com/matematicsolutions/us-eli-mcp) | Congress.gov - projekty ustaw federalnych, darmowy klucz API |
+| 🇨🇴 Colombia | [co-eli-mcp](https://github.com/matematicsolutions/co-eli-mcp) | Constitutional Court decisions, keyless |
 
-### Azja i Pacyfik (Apache-2.0)
+### Asia-Pacific
 
-| Kraj | Konektor | Źródło |
+| | Connector | Source |
 |---|---|---|
+| 🇯🇵 Japan | [jp-eli-mcp](https://github.com/matematicsolutions/jp-eli-mcp) | e-Gov national legislation |
 | 🇦🇺 Australia | [au-eli-mcp](https://github.com/matematicsolutions/au-eli-mcp) | Federal Register of Legislation |
-| 🇮🇱 Izrael | [il-eli-mcp](https://github.com/matematicsolutions/il-eli-mcp) | Knesset OData, bez klucza |
-| 🇯🇵 Japonia | [jp-eli-mcp](https://github.com/matematicsolutions/jp-eli-mcp) | e-Gov - legislacja krajowa |
-| 🇲🇾 Malezja | [my-eli-mcp](https://github.com/matematicsolutions/my-eli-mcp) | Laws of Malaysia Online |
-| 🇸🇬 Singapur | [sg-eli-mcp](https://github.com/matematicsolutions/sg-eli-mcp) | Singapore Statutes Online |
+| 🇸🇬 Singapore | [sg-eli-mcp](https://github.com/matematicsolutions/sg-eli-mcp) | Singapore Statutes Online |
+| 🇲🇾 Malaysia | [my-eli-mcp](https://github.com/matematicsolutions/my-eli-mcp) | Laws of Malaysia Online |
+| 🇮🇱 Israel | [il-eli-mcp](https://github.com/matematicsolutions/il-eli-mcp) | Knesset OData, keyless |
 
-### Wielojurysdykcyjny konektor (41. z 41)
+### Cross-jurisdiction and monitoring
 
-[**legalize-mcp**](https://github.com/matematicsolutions/legalize-mcp) (Apache-2.0) -
-jeden serwer MCP nad korpusem [legalize-dev](https://github.com/legalize-dev) (MIT):
-legislacja 32 jurysdykcji (21 z UE) jako Markdown z identyfikatorem w stylu ELI
-i historią zmian (każda reforma to commit). Nadbudowa nad otwartym korpusem,
-nie osobny konektor per kraj.
-
-### Monitoring (nie wlicza się do 41 konektorów)
-
-[**eu-drift-watch**](https://github.com/matematicsolutions/eu-drift-watch) (Apache-2.0) -
-comiesięczny automatyczny monitoring ustaw kotwicowych w 9 jurysdykcjach UE
-przez konektory eu-legal-mcp - sprawdza, czy przepis nie zmienił nazwy ani
-nie został uchylony u źródła. To watchdog nad flotą, nie kolejne źródło prawa.
-
-## Skille Claude Code / Cowork - dwa huby (MIT)
-
-| Hub | Zakres | Skille własne | Bundle |
-|---|---|---|---|
-| [**awesome-matematic-skills-pl**](https://github.com/matematicsolutions/awesome-matematic-skills-pl) | Polska jurysdykcja - orzecznictwo PL/UE, KRS, redline DOCX, RODO PL, cała procedura polskiej kancelarii | 41 | `fundament-weryfikacyjny`, `orzecznictwo-zrodla`, `dokumenty`, `governance-kancelarii`, `jakosc-tresci`, `ochrona-danych`, `multi-jurysdykcja-ue`, `dev-mcp` |
-| [**awesome-matematic-skills-en**](https://github.com/matematicsolutions/awesome-matematic-skills-en) | Metoda niezależna od jurysdykcji - grounding, red-team review, scoring, prawo UE. Głęboka jurysdykcja PL zostaje w hubie polskim | 18 | `verification-foundation`, `content-quality`, `data-protection`, `ai-governance`, `eu-law-sources`, `eu-multi-jurisdiction` |
-
-Oba huby linkują też do sprawdzonych, kuratorskich skilli innych zespołów
-(z pełną atrybucją i oryginalną licencją) - lista rośnie, patrz README
-każdego huba. Instalacja jedną komendą - `npx skills add matematicsolutions/<hub>`
-(dowolny agent zgodny z Agent Skills: Cursor, Codex, Gemini CLI, Claude Code)
-albo `/plugin marketplace add matematicsolutions/<hub>` natywnie w Claude Code.
-
-## Praxis - przewodniki dla kancelarii (CC BY-SA 4.0)
-
-[**praxis**](https://github.com/matematicsolutions/praxis) -
-otwarte przewodniki praktyczne LegalTech i AI governance dla
-polskich kancelarii. Mapy, podręczniki, checklisty.
-
-## lpm-pl - skille zarządzania portfelem spraw (Apache 2.0)
-
-[**lpm-pl**](https://github.com/matematicsolutions/lpm-pl) - otwarte
-skille AI dla polskiej kancelarii zarządzającej portfelem spraw. Trzy
-moduły, które można łączyć: cotygodniowe raporty z oceną czerwony /
-żółty / zielony i prognozą na następny tydzień, kontroler zmian
-zakresu (wykrywa scope creep i generuje wniosek o rozszerzenie
-zakresu), rejestr RAID - ryzyka, założenia, problemy otwarte i
-decyzje. Polskie realia billingu - stawki godzinowe,
-ryczałt, success fee z ograniczeniami art. 16 KEA. Output `.docx` z
-brand szablonem kancelarii. RODO-safe by default. Cherry-pick
-patternu [legalopsconsulting/lpm-skills](https://github.com/legalopsconsulting/lpm-skills)
-(Apache 2.0 snapshot), treść przepisana pod polski model współpracy
-kancelaria-klient.
-
-## matematic-contract-review-pl - tabular review umów (Apache 2.0)
-
-[**matematic-contract-review-pl**](https://github.com/matematicsolutions/matematic-contract-review-pl) -
-otwarty skill Claude Code do **bulk audit umów** w polskiej
-kancelarii. Kopiujesz folder PDF/DOCX, definiujesz schemat kolumn
-(data podpisania, strony, klauzule, prawo właściwe), skill zwraca
-`.docx` z tabelą + czerwone flagi + cytaty źródłowe.
-
-Cztery zasady konstytucyjne v1.0.0: **RODO-safe by default**
-(pseudonimizacja PII PRZED każdym wywołaniem LLM, bezwzględnie),
-**multi-provider LLM** (Ollama lokalny default, Claude/Gemini/GPT
-opt-in - decyzja kancelarii), **cytat fizycznie obecny w tekście
-źródłowym** (mechaniczna walidacja substring match, halucynacja
-niemożliwa na warstwie struktury), **bez nazywania firm w summary**
-("Strona A", "Dostawca", "Klient").
-
-Use case: due diligence M&A na większym portfelu umów, audyt
-portfela kontraktów dostawczych, weryfikacja umów powierzenia
-danych (art. 28 RODO), przegląd NDA przed podpisaniem przez
-kancelarię. Cherry-pick patternu UX z
-[jamietso/Tabular_Review](https://github.com/jamietso/Tabular_Review)
-(MIT), treść napisana od zera pod polskie realia z eliminacją 4
-critical anti-patternów upstream (Gemini-only / API key w
-frontendzie / brak persistence / Apple-only deps).
-
-## matematic-anonimizacja-pl - anonimizacja danych "Let It Be" (Apache 2.0)
-
-[**matematic-anonimizacja-pl**](https://github.com/matematicsolutions/matematic-anonimizacja-pl) -
-samodzielny silnik **anonimizacji i pseudonimizacji polskich danych
-osobowych** w tekście. Zero zależności, offline, deterministyczny -
-treść nie opuszcza maszyny. Wykrywa PESEL/NIP/REGON/KRS, IBAN/NRB
-(checksuma mod-97), dowód osobisty, e-mail, telefon, imiona i nazwiska
-(gazetteer imion), firmy z formą prawną i adresy.
-
-Dwa tryby RODO: **anonimizacja nieodwracalna** (mapa nie powstaje, motyw
-26 - dane poza RODO) oraz **pseudonimizacja odwracalna** (mapa
-token-oryginał, art. 4 pkt 5 - do pracy z LLM i odzyskania wyniku).
-Bramka "no PII leaves" przerywa operację, gdy oryginał przetrwał
-podmianę. Trzy interfejsy: skill Claude Code, CLI, biblioteka.
-
-To wydzielona, osobno testowana warstwa pseudonimizacji, której wymaga
-`matematic-contract-review-pl` (PII PRZED każdym wywołaniem LLM).
-Logika polskich identyfikatorów pochodzi z własnej biblioteki
-pl-entities (Patron); wzorce operacyjne (TTL na mapy, audit log dla
-Inspektora, szyfrowane archiwum AES-GCM) to cherry-pick patternu z
-[gregmos/PII-Shield](https://github.com/gregmos/PII-Shield) (MIT).
-
-## matematic-readiness - audyt gotowości kancelarii do AI (CC BY-SA 4.0)
-
-[**matematic-readiness**](https://github.com/matematicsolutions/matematic-readiness) -
-otwarty pakiet do oceny gdzie polska kancelaria jest na drodze do
-bezpiecznego wdrożenia AI. **30 pytań w 5 polskich wymiarach** (RODO
-compliance / tajemnica zawodowa / AI Act gotowość / kompetencje
-zespołu / architektura techniczna), scoring 1-5 z uzasadnieniem,
-5-poziomowa mapa progresji (Poznający → Próbujący → Wdrażający →
-Integrator → Architekt). Pozycja kancelarii = **minimum z
-wymiarów**, nie średnia.
-
-Plus **framework Build vs Buy** z polskim kontekstem regulacyjnym - 8
-kryteriów z wagą, decision tree i porównanie 9 platform - lokalnych
-(Patron, LEX AI, Legalis AI), zachodnich agentów prawnych (Harvey,
-CoCounsel, Lexis AI) i platform ogólnego przeznaczenia (Claude
-Enterprise, Microsoft 365 Copilot, Cline + Ollama). Plus kalkulator
-TCO 3-letniego dla 1-100 osób. Cherry-pick patternu
-[OneC0de/legal-ai-architect-toolkit](https://github.com/OneC0de/legal-ai-architect-toolkit)
-(MIT), wszystkie treści napisane od zera pod polskie ustawy
-zawodowe (art. 6 PoA, art. 3 URP), AI Act (CELEX 32024R1689), RODO
-oraz DPF.
-
-## matematic-legal-verify-pl - weryfikacja outputu AI prawnego (Apache 2.0)
-
-[**matematic-legal-verify-pl**](https://github.com/matematicsolutions/matematic-legal-verify-pl) -
-sześć composable skilli Claude Code, które pilnują, żeby praca z AI była
-rzetelna od wejścia do wyjścia. Nie piszą pism - sprawdzają wejście i wynik,
-zanim cokolwiek pójdzie do klienta lub sądu.
-
-**intake-sufficiency-pl** - ocena wejścia: czy zlecenie ma dość kontekstu
-(cel / zakres / podmiot / fakty / ograniczenia), by zacząć. Wypisuje luki,
-generuje pytania uzupełniające do klienta, składa szkielet karty zlecenia.
-**legal-request-router-pl** - klasyfikator zapytania: ocenia złożoność i
-ryzyko, dobiera proporcjonalną ścieżkę kontroli wyniku (zwykła odpowiedź /
-grounding / debata / paczka audytowa). Lustro intake - chroni przed paleniem
-tokenów na rutynie i przed przepuszczeniem spraw wysokiej stawki.
-**citation-grounding-pl** - mechaniczny weryfikator cytatu: string-matchem
-sprawdza, czy każdy cytat z orzeczenia / ustawy / umowy faktycznie istnieje
-w źródle (normalizacja cudzysłowów i myślników, obsługa luk `[...]`). Brak
-trafienia = potencjalna halucynacja = blokada publikacji. Spina się z
-konektorami mcp-saos / mcp-nsa / mcp-eu-sparql (pobranie źródła).
-**adversarial-legal-review-pl** - kontradyktoryjny stress-test pisma
-wysokiej stawki (builder buduje tezę, attacker atakuje kontr-orzecznictwem,
-synthesizer godzi, verifier robi kontrolę 10-punktową), z bramką kosztu -
-tylko dla high-stakes, nie dla rutyny. **deliverable-fidelity-pl** -
-weryfikator wierności: czy finalny dokument oddaje ustalenia analizy (żadna
-flaga RED nie wypadła z podsumowania); mechaniczny check + kontrola wyrywkowa
-LLM, pominięte RED = blokada. **legal-ai-audit-bundle** - paczka
-audytowa: deliverable + ślad rozumowania + raport cytatów + log kosztu w
-jednym folderze z manifestem i hashami SHA256, artefakt zgodny z AI Act
-art. 12 (rejestry), art. 14 (nadzór), art. 50 (poinformowanie o AI).
-
-Skrypty wyłącznie na Node, bez zewnętrznych zależności, działają lokalnie. Mapa
-pseudonimizacji nigdy nie trafia do paczki (art. 4 pkt 5 RODO). Cherry-pick
-patternu z [AnttiHero/lavern](https://github.com/AnttiHero/lavern)
-(Apache 2.0), kod i prompty napisane od zera pod polskie realia.
-
-## matematic-pomoc-prawna-pl - plugin dla pomocy prawnej (Apache 2.0)
-
-[**matematic-pomoc-prawna-pl**](https://github.com/matematicsolutions/matematic-pomoc-prawna-pl) -
-otwarty plugin Claude Code dla **polskiej nieodpłatnej pomocy prawnej,
-klinik prawa, fundacji i NGO** prowadzących poradnictwo. Przyspiesza
-pracę pomocniczą wokół poradnictwa - kwalifikacja zgłoszenia,
-ustrukturyzowane przyjęcie sprawy, pierwszy szkic pisma, szkielet
-analizy IRAC - aby ten sam zespół obsłużył więcej osób. Nie zastępuje
-prawnika; każdy wynik to szkic do analizy i nadzoru.
-
-Kręgosłup nadzoru i weryfikacji: **7 artykułów konstytucji projektu**,
-polskie markery pewności (`[DO WERYFIKACJI]`, `[POTRZEBNE BADANIE]`,
-`[ANALIZA PRAWNIKA]`, `[OGRANICZENIE RODO/AI ACT]`), **trzy konfigurowalne
-modele nadzoru koordynatora**, ślad audytowy AI Act art. 12. Kluczowa
-zasada: **skille nie zaszywają prawa** - czytają konfigurację organizacji
-ustawioną przy starcie, więc plugin działa wg aktualnych przepisów i
-realiów konkretnej organizacji, nie wg reguł wbudowanych w kod.
-
-**MateMatic dostarcza narzędzie, nie usługę prawną** - nie świadczy pomocy
-prawnej, nie jest kancelarią, nie udziela porad. Odpowiedzialność
-merytoryczna i nadzór są po stronie organizacji i jej uprawnionych
-prawników. Wzorzec architektoniczny studiowany z
-[anthropics/claude-for-legal](https://github.com/anthropics/claude-for-legal)
-(Apache-2.0) i [lawdroidAI/legal-aid-plugin](https://github.com/lawdroidAI/legal-aid-plugin)
-(Apache-2.0), cała treść polska napisana od zera. Wydane otwarcie, aby każdy
-punkt npp, klinika prawa, fundacja i NGO mogły wdrożyć je za darmo.
-
-## Dlaczego dual-license (AGPL + MIT/Apache-2.0)
-
-- **Powłoka Patron pod AGPL-3.0** chroni przed SaaS-ification. Kancelaria
-  self-host nie ma żadnych dodatkowych obowiązków. Konkurent
-  oferujący Patrona jako SaaS dla osób trzecich musi otworzyć
-  modyfikacje.
-- **Konektory MCP pod MIT lub Apache-2.0** to infrastruktura do publicznych
-  źródeł prawa - konektory polskie i unijnego poziomu na MIT, linia
-  eu-legal-mcp (Europa, Ameryki, Azja i Pacyfik) na Apache-2.0. Im więcej
-  osób ich używa, tym bardziej stają się standardem zwracania cytatów
-  z prawa poszczególnych jurysdykcji.
-
-Szczegóły:
-[ADR-0002](https://github.com/matematicsolutions/patron/blob/main/governance/adr/0002-dual-license-agpl-shell-mit-connectors.md).
-
-## Konstytucja AI
-
-Każda kancelaria stawiająca Patrona przeczyta i podpisze
-[**Konstytucję AI Patrona v1.2.0**](https://github.com/matematicsolutions/patron/blob/main/governance/CONSTITUTION.md)
-- 9 zasad, granice produktu, role (Administrator / Operator /
-Inspektor), audyt, ewolucja. Mapa do AI Act, RODO i Zasad etyki
-adwokackiej / radcowskiej.
-
-## Standard agentów AI (AGENTS.md / CONSTITUTION.md)
-
-Patron, oba huby skilli i konektory pierwszej fali (PL + poziom UE) mają
-plik [`AGENTS.md`](https://agents.md) w root - kanoniczne instrukcje dla
-agentów AI zgodne ze standardem **Linux Foundation / Agentic AI Foundation**.
-Czytany natywnie przez 20+ narzędzi (Cursor, Codex OpenAI, Jules Google,
-Devin/Windsurf Cognition, Aider, Amp, Factory, GitHub Copilot, Claude Code).
-
-Linia eu-legal-mcp (konektory generowane własnym pipeline'em od lipca 2026)
-ma ten sam cel w dwóch osobnych plikach zamiast jednego: `CONSTITUTION.md`
-(granice i zasady konektora) i `DISCOVERY.md` (źródło, licencja,
-ograniczenia pokrycia). Inny format, ta sama funkcja - agent czyta zasady
-repo, zanim zacznie na nim pracować.
-
-Dlaczego: Patron i konektory MCP mają być produktem **vendor-neutral** -
-żaden klient kancelarii ani deweloper nie powinien być przywiązany do
-jednego narzędzia AI, żeby z nimi pracować. To ten sam argument w warstwie
-devexp.
-
-## Kontakt
-
-- **Strona**: [matematicsolutions.com](https://matematicsolutions.com)
-- **Katalog**: [matematicsolutions.com/boutique](https://matematicsolutions.com/boutique)
-- **Email**: [kontakt@matematic.co](mailto:kontakt@matematic.co)
-- **LinkedIn**: [Wiesław Mazur](https://www.linkedin.com/in/wies%C5%82aw-mazur-535428364/)
+- [`legalize-mcp`](https://github.com/matematicsolutions/legalize-mcp) - one server over the [legalize-dev](https://github.com/legalize-dev) corpus: legislation from 32 jurisdictions (21 EU) as Markdown with ELI-style ids and full change history (every reform is a commit).
+- [`eu-drift-watch`](https://github.com/matematicsolutions/eu-drift-watch) - a monthly watchdog that checks whether anchor statutes across 9 EU jurisdictions have been renamed or repealed at the source. A guard over the fleet, not another source.
 
 ---
 
-*Z Polski. Dla polskich kancelarii. Audytowalne, lokalne, vendor-neutral.*
+## Skill hubs - grounded legal-AI skills for any agent
+
+Two open hubs of Claude Code / Cowork skills, installable in one command for any Agent-Skills-compatible tool (Claude Code, Cursor, Codex, Gemini CLI):
+
+| Hub | Focus | Skills |
+|---|---|---|
+| [**awesome-matematic-skills-en**](https://github.com/matematicsolutions/awesome-matematic-skills-en) | Method-neutral: citation grounding, red-team review, output scoring, EU law | 18 |
+| [**awesome-matematic-skills-pl**](https://github.com/matematicsolutions/awesome-matematic-skills-pl) | Polish jurisdiction: PL/EU case law, KRS, DOCX redlining, GDPR, full firm workflow | 41 |
+
+```
+npx skills add matematicsolutions/awesome-matematic-skills-en
+```
+
+The heart of both hubs is a **verification core**: grounding a citation against its source, stress-testing a high-stakes memo adversarially, scoring an output before it ships, and packaging the whole reasoning trail into an AI-Act-compliant audit bundle. The same discipline as the connectors, one layer up.
+
+---
+
+## Boutique - the platform that puts it all one command away
+
+**[matematicsolutions.com/en/boutique](https://matematicsolutions.com/en/boutique)** is the front door to the whole ecosystem, built around two doors:
+
+- **[For the lawyer - Skills](https://matematicsolutions.com/en/boutique/skills).** Ready-made abilities you load once and keep: reviewer, humaniser, devil's advocate, citation extraction, clause checklist, output scoring, EU-law and CJEU search.
+- **[For the agent - MCP connectors](https://matematicsolutions.com/en/boutique/connectors).** Live sources of law wired straight into the agent - statutes, case law, the company register, the compliance corpus - each with a stable identifier and a link back to the source.
+
+Both install with **one command** - `npx skills add ...` for any agent, or `/plugin marketplace add ...` inside Claude Code. Prefer not to touch a terminal? A Windows wizard places a skill for you: no Git, no config, nothing technical. Everything then runs locally, on your own documents, with your data staying with you.
+
+Free to start, GDPR-safe by default. The catalogue grows steadily - from our own repositories and from real practice needs - with a premium tier coming later, always honest about authorship. If you want to wire one connector or skill into your own product, this is where to start.
+
+---
+
+<a id="why-open-source"></a>
+
+## Why open source
+
+- **Patron's shell is AGPL-3.0** - it protects against SaaS-ification. A firm self-hosting has no extra obligations; a competitor reselling Patron as SaaS to third parties must open its changes.
+- **The connectors are MIT or Apache-2.0** - infrastructure to public sources of law. The more products depend on them, the more they become the default way to return grounded citations from each jurisdiction. That is the point.
+
+Rationale: [ADR-0002](https://github.com/matematicsolutions/patron/blob/main/governance/adr/0002-dual-license-agpl-shell-mit-connectors.md).
+
+## Governance you can audit
+
+- **[AI Constitution v1.2.0](https://github.com/matematicsolutions/patron/blob/main/governance/CONSTITUTION.md)** - 9 principles, product boundaries, roles (Administrator / Operator / Auditor), mapped to the EU AI Act, GDPR and professional-ethics rules. Every firm reads and signs it.
+- **[AGENTS.md](https://agents.md) everywhere** - canonical AI-agent instructions in the Linux Foundation / Agentic AI Foundation standard, read natively by 20+ tools. The connector fleet carries `CONSTITUTION.md` + `DISCOVERY.md` (boundaries, source, licence, coverage limits) so an agent reads the rules before it touches the repo.
+- **Vendor-neutral by design** - no client and no developer should be locked to one AI tool to work with our software.
+
+---
+
+## Based in Poland - our home market and where we started
+
+We began by solving this for Polish law firms, and that stack is the deepest we ship: the Polish edition of Patron, connectors for [ISAP](https://github.com/matematicsolutions/mcp-isap) (legislation), [SAOS](https://github.com/matematicsolutions/mcp-saos) (common and supreme courts), [NSA/CBOSA](https://github.com/matematicsolutions/mcp-nsa) (administrative courts, 2.39M rulings), [KRS](https://github.com/matematicsolutions/mcp-krs) (company register), [EUREKA](https://github.com/matematicsolutions/mcp-eureka) (517k+ tax interpretations) and [KIO](https://github.com/matematicsolutions/kio-orzeczenia-mcp) (public procurement), plus a full set of GDPR-native open skills for contract review, anonymization, output verification, AI-readiness assessment and legal-aid clinics. The 41-skill Polish hub covers the whole firm workflow. Polish catalogue: **[matematicsolutions.com](https://matematicsolutions.com)**.
+
+## Contact
+
+- **Website**: [matematicsolutions.com/en](https://matematicsolutions.com/en/)
+- **Boutique**: [matematicsolutions.com/en/boutique](https://matematicsolutions.com/en/boutique)
+- **Email**: [kontakt@matematic.co](mailto:kontakt@matematic.co)
+- **LinkedIn**: [Wieslaw Mazur](https://www.linkedin.com/in/wies%C5%82aw-mazur-535428364/)
+
+---
+
+<div align="center">
+
+*AI that knows what it doesn't know - we know how.*
+<br>
+Built in Poland, for law firms in every jurisdiction where the law is public. That is why Patron speaks nine languages, and counting.
+
+</div>
