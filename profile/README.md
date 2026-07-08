@@ -137,8 +137,8 @@ nie został uchylony u źródła. To watchdog nad flotą, nie kolejne źródło 
 
 | Hub | Zakres | Skille własne | Bundle |
 |---|---|---|---|
-| [**awesome-matematic-skills-pl**](https://github.com/matematicsolutions/awesome-matematic-skills-pl) | Polska jurysdykcja - orzecznictwo PL/UE, KRS, redline DOCX, RODO PL, cała procedura polskiej kancelarii | 35 | `fundament-weryfikacyjny`, `orzecznictwo-zrodla`, `dokumenty`, `governance-kancelarii`, `jakosc-tresci`, `ochrona-danych`, `multi-jurysdykcja-ue`, `dev-mcp` |
-| [**awesome-matematic-skills-en**](https://github.com/matematicsolutions/awesome-matematic-skills-en) | Metoda niezależna od jurysdykcji - grounding, red-team review, scoring, prawo UE. Głęboka jurysdykcja PL zostaje w hubie polskim | 18 | `verification-foundation`, `content-quality`, `data-protection`, `ai-governance`, `eu-law-sources` |
+| [**awesome-matematic-skills-pl**](https://github.com/matematicsolutions/awesome-matematic-skills-pl) | Polska jurysdykcja - orzecznictwo PL/UE, KRS, redline DOCX, RODO PL, cała procedura polskiej kancelarii | 41 | `fundament-weryfikacyjny`, `orzecznictwo-zrodla`, `dokumenty`, `governance-kancelarii`, `jakosc-tresci`, `ochrona-danych`, `multi-jurysdykcja-ue`, `dev-mcp` |
+| [**awesome-matematic-skills-en**](https://github.com/matematicsolutions/awesome-matematic-skills-en) | Metoda niezależna od jurysdykcji - grounding, red-team review, scoring, prawo UE. Głęboka jurysdykcja PL zostaje w hubie polskim | 18 | `verification-foundation`, `content-quality`, `data-protection`, `ai-governance`, `eu-law-sources`, `eu-multi-jurisdiction` |
 
 Oba huby linkują też do sprawdzonych, kuratorskich skilli innych zespołów
 (z pełną atrybucją i oryginalną licencją) - lista rośnie, patrz README
