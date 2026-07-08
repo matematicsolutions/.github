@@ -35,7 +35,7 @@ wydanie unijne, agent po angielsku z EUR-Lex na pierwszym planie). Pozostałe
 konektory dobiera się osobno z Boutique. Pobranie i szczegóły per wersja:
 [matematicsolutions.com/pobierz](https://matematicsolutions.com/pobierz).
 
-## Konektory MCP - 41 konektorów, 32 jurysdykcje, 10 mln+ dokumentów źródłowych
+## Konektory MCP - 41 konektorów, 32 jurysdykcje, 30 mln+ dokumentów źródłowych
 
 Każdy konektor to osobny serwer MCP (stdio transport, `uvx`/`npx` lub
 sklonowanie repo). Każde wywołanie narzędzia zwraca `structuredContent.citations`
