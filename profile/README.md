@@ -27,11 +27,13 @@ do podpisu przez kancelarię, docker-compose ready, vendor-agnostic LLM
 (Gemini / Claude / Ollama lokalny).
 
 Jedno repo, jeden [release](https://github.com/matematicsolutions/patron/releases),
-siedem instalatorów Windows - **PL, EN, BR, IT, DE, ES, FR**. Każda wersja ma
+dziewięć instalatorów Windows - **PL, EN, US, GB, BR, IT, DE, ES, FR**. Każda wersja ma
 domyślnie wpięty lokalny konektor prawa swojego rynku (Polska: SAOS/NSA/ISAP/KRS,
-Brazylia: legis.senado.leg.br + DataJud CNJ, Włochy: Normattiva, Niemcy: NeuRIS,
-Hiszpania: BOE, Francja: Legifrance/PISTE - wymaga darmowego klucza PISTE; EN to
-wydanie unijne, agent po angielsku z EUR-Lex na pierwszym planie). Pozostałe
+USA: Congress.gov/GovInfo/Federal Register/eCFR/CourtListener, Wielka Brytania:
+legislation.gov.uk/Find Case Law/GOV.UK Search, Brazylia: legis.senado.leg.br +
+DataJud CNJ, Włochy: Normattiva, Niemcy: NeuRIS, Hiszpania: BOE, Francja:
+Legifrance/PISTE - wymaga darmowego klucza PISTE; EN to wydanie unijne, agent po
+angielsku z EUR-Lex na pierwszym planie). Pozostałe
 konektory dobiera się osobno z Boutique. Pobranie i szczegóły per wersja:
 [matematicsolutions.com/pobierz](https://matematicsolutions.com/pobierz).
 
