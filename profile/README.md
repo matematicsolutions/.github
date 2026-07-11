@@ -6,7 +6,7 @@
 
 <br>
 
-**Open, grounded legal-AI infrastructure for law firms - anywhere the law is public.** Self-hosted. Auditable. Vendor-neutral.
+**Open, grounded legal-AI infrastructure for law firms - anywhere the law is public.** Local-first, self-hosted. Auditable. Vendor-neutral.
 
 [![MCP connectors](https://img.shields.io/badge/MCP_connectors-43-1E3A5F?style=flat-square)](https://matematicsolutions.com/en/boutique)
 [![Jurisdictions](https://img.shields.io/badge/jurisdictions-32-6C717A?style=flat-square)](https://matematicsolutions.com/en/boutique)
