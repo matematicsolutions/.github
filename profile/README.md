@@ -8,7 +8,7 @@
 
 **Open, grounded legal-AI infrastructure for law firms - anywhere the law is public.** Local-first, self-hosted. Auditable. Vendor-neutral.
 
-[![MCP connectors](https://img.shields.io/badge/MCP_connectors-43-1E3A5F?style=flat-square)](https://matematicsolutions.com/en/boutique)
+[![MCP connectors](https://img.shields.io/badge/MCP_connectors-44-1E3A5F?style=flat-square)](https://matematicsolutions.com/en/boutique)
 [![Jurisdictions](https://img.shields.io/badge/jurisdictions-32-6C717A?style=flat-square)](https://matematicsolutions.com/en/boutique)
 [![Source documents](https://img.shields.io/badge/source_documents-34M%2B-D4A537?style=flat-square)](https://matematicsolutions.com/en/boutique)
 [![Skills](https://img.shields.io/badge/Claude_skills-59-10b981?style=flat-square)](https://github.com/matematicsolutions/awesome-matematic-skills-en)
@@ -35,7 +35,7 @@ So we build the opposite. Every tool in this fleet returns a **verifiable citati
 | | | |
 |---|---|---|
 | **[Patron](https://github.com/matematicsolutions/patron)** | An AI agent that never leaves the firm's server | 9 desktop editions |
-| **MCP connector fleet** | Grounded, keyless-first access to public law | 43 connectors · 33 jurisdictions |
+| **MCP connector fleet** | Grounded, keyless-first access to public law | 44 connectors · 33 jurisdictions |
 | **Two skill hubs** | Method-neutral legal-AI skills for Claude Code / Cursor / Codex | 59 skills |
 | **[Boutique](https://matematicsolutions.com/en/boutique)** | Install-ready catalogue of every connector and skill | Always current |
 
