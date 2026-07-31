@@ -8,7 +8,7 @@
 
 **Open, grounded legal-AI infrastructure for law firms - anywhere the law is public.** Local-first, self-hosted. Auditable. Vendor-neutral.
 
-[![MCP connectors](https://img.shields.io/badge/MCP_connectors-44-1E3A5F?style=flat-square)](https://matematicsolutions.com/en/boutique)
+[![MCP connectors](https://img.shields.io/badge/MCP_connectors-45-1E3A5F?style=flat-square)](https://matematicsolutions.com/en/boutique)
 [![Jurisdictions](https://img.shields.io/badge/jurisdictions-32-6C717A?style=flat-square)](https://matematicsolutions.com/en/boutique)
 [![Source documents](https://img.shields.io/badge/source_documents-34M%2B-D4A537?style=flat-square)](https://matematicsolutions.com/en/boutique)
 [![Skills](https://img.shields.io/badge/Claude_skills-59-10b981?style=flat-square)](https://github.com/matematicsolutions/awesome-matematic-skills-en)
@@ -35,7 +35,7 @@ So we build the opposite. Every tool in this fleet returns a **verifiable citati
 | | | |
 |---|---|---|
 | **[Patron](https://github.com/matematicsolutions/patron)** | An AI agent that never leaves the firm's server | 9 desktop editions |
-| **MCP connector fleet** | Grounded, keyless-first access to public law | 44 connectors · 33 jurisdictions |
+| **MCP connector fleet** | Grounded, keyless-first access to public law | 45 connectors · 33 jurisdictions |
 | **Two skill hubs** | Method-neutral legal-AI skills for Claude Code / Cursor / Codex | 59 skills |
 | **[Boutique](https://matematicsolutions.com/en/boutique)** | Install-ready catalogue of every connector and skill | Always current |
 
@@ -182,7 +182,7 @@ Rationale: [ADR-0002](https://github.com/matematicsolutions/patron/blob/main/gov
 
 ## Based in Poland - our home market and where we started
 
-We began by solving this for Polish law firms, and that stack is the deepest we ship: the Polish edition of Patron, connectors for [ISAP](https://github.com/matematicsolutions/mcp-isap) (legislation), [SAOS](https://github.com/matematicsolutions/mcp-saos) (common and supreme courts), [NSA/CBOSA](https://github.com/matematicsolutions/mcp-nsa) (administrative courts, 2.39M rulings), [KRS](https://github.com/matematicsolutions/mcp-krs) (company register), [EUREKA](https://github.com/matematicsolutions/mcp-eureka) (517k+ tax interpretations) and [KIO](https://github.com/matematicsolutions/kio-orzeczenia-mcp) (public procurement) - over 3.5M Polish legal documents in one grounded stack - plus a full set of GDPR-native open skills for contract review, anonymization, output verification, AI-readiness assessment and legal-aid clinics. The 41-skill Polish hub covers the whole firm workflow. Polish catalogue: **[matematicsolutions.com](https://matematicsolutions.com)**.
+We began by solving this for Polish law firms, and that stack is the deepest we ship: the Polish edition of Patron, connectors for [ISAP](https://github.com/matematicsolutions/mcp-isap) (legislation), [SAOS](https://github.com/matematicsolutions/mcp-saos) (common and supreme courts), [NSA/CBOSA](https://github.com/matematicsolutions/mcp-nsa) (administrative courts, 2.39M rulings), [KRS](https://github.com/matematicsolutions/mcp-krs) (company register), [EUREKA](https://github.com/matematicsolutions/mcp-eureka) (517k+ tax interpretations) and [KIO](https://github.com/matematicsolutions/kio-orzeczenia-mcp) (public procurement) - over 3.5M Polish legal documents in one grounded stack, reachable through a single aggregator, [prawo-pl-mcp](https://github.com/matematicsolutions/prawo-pl-mcp), when you would rather install one server than seven - plus a full set of GDPR-native open skills for contract review, anonymization, output verification, AI-readiness assessment and legal-aid clinics. The 41-skill Polish hub covers the whole firm workflow. Polish catalogue: **[matematicsolutions.com](https://matematicsolutions.com)**.
 
 ## Contact
 
