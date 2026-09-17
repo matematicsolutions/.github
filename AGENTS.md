@@ -8,20 +8,23 @@ This is the **`.github`** repository of the [matematicsolutions](https://github.
 
 - `profile/README.md` - the org landing page shown at `https://github.com/matematicsolutions`
 - `assets/hero.svg` - the banner rendered at the top of the profile
-- (future) Issue / PR templates, security policy, FUNDING.yml
+- `ecosystem.json` - source of truth for every number on the profile, each with a definition
+- `scripts/check_ecosystem.py` - the gate: numbers, connector links, retired phrases, banner proportions
 
 This is **not a product** - it is the organization's front door, the first thing a prospective user (a law firm, a developer, a partner) sees on our GitHub.
 
 ## MateMatic context (HARD CONSTRAINTS)
 
-[MateMatic Solutions](https://matematicsolutions.com) builds **open, grounded, self-hosted legal-AI infrastructure for law firms - in any jurisdiction where the law is public.** Vendor-neutral, auditable, GDPR-safe. We started in Poland and that stack is our deepest, but the product serves law firms worldwide; the growing set of Patron language editions (PL, EN, US, GB, BR, IT, DE, ES, FR - and counting) is the expression of that reach.
+[MateMatic Solutions](https://matematicsolutions.com) (Krakow) builds **European LegalTech infrastructure that leads a legal answer back to its source, context and provenance**, in four layers: **Repertorium** (legal knowledge infrastructure, a corpus), **PATRON** (local-first legal workspace), **Boutique** (catalogue of connectors and skills), **MateMatic** (architecture, audit, deployment). The website answers "why does this exist"; GitHub answers "does it exist, and how is it built".
 
 The org profile README must be:
 
 - **English-primary and world-facing.** The audience is global. Poland is presented as our home market and origin, not as the ceiling of who we serve. Do not reintroduce a Polish-primary body or a "for Polish law firms" framing.
-- **A portfolio map** - a current list of the public repos: Patron (9 language editions), the 41-connector MCP fleet across 32 jurisdictions (Europe / Americas / Asia-Pacific), the two skill hubs (EN / PL), plus the open legal skills, praxis, and this repo.
+- **An architecture map, not a portfolio list** - the four layers first, then proof you can inspect, then the connector list (collapsed). A technical reader should know in 30 seconds what is data, what is the application, what is an extension, what is open and what runs locally.
+- **One vocabulary.** *Corpus* = a snapshot with a known state date (Repertorium, offline connectors). *Live query* = the request goes to the official source now (most connectors). Never call Repertorium "live". *Connector* = access layer to one source. *Skill* = a procedure an agent follows. *Provenance* = where data came from. *Locator* = exact place of a passage in its source. *Coverage* = data actually present in a corpus.
+- **Mechanisms over adjectives.** No "zero-cloud", "GDPR-safe", "AI-Act-compliant", "all open source". Describe what happens to data, and link the mechanism. Do not suggest that any AI use in a law firm is high-risk under the AI Act.
 - **Brand positioning** - the slogan "AI that knows what it doesn't know" / "We know how" ties directly to the product: every connector returns a verifiable citation, so the model shows its source instead of guessing.
-- **No sales pitch.** GitHub is read by a technical buyer (a firm's CTO / IT), not a managing partner. Arguments: "signed AI Constitution", "AGPL-3.0 protects against SaaS-ification", "hash-chained audit trail, AI Act art. 12" - never "boost efficiency by 40%".
+- **No sales pitch.** GitHub is read by a technical buyer (a firm's CTO / IT), not a managing partner. Arguments: "signed AI Constitution", "AGPL-3.0 protects against SaaS-ification", "hash-chained audit trail with its own verifier" - never "boost efficiency by 40%".
 
 ## Repo structure
 
@@ -31,12 +34,19 @@ profile/
 assets/
   hero.svg      - profile banner
   matematic-logo-400.png
+scripts/
+  check_ecosystem.py - gate (exit 1 = BLOCK)
+ecosystem.json  - numbers with definitions
 README.md       - meta-readme for this repo
 ```
 
 ## Build and test
 
-No compilation. "Test" = push, open `https://github.com/matematicsolutions`, and check the profile renders (banner, badges, tables, links).
+Before committing: `python scripts/check_ecosystem.py` (run it on its own, never through a pipe - a pipe hides the exit code). Exit 1 = BLOCK. Change a number in `ecosystem.json` first, then in the README.
+
+The banner follows the golden section, like the website: margins 64, gutter 48 outside the split, columns 0.618 / 0.382, each block starting at 0.382 of its free height. The gate measures the invisible `phi-major` / `phi-minor` guides. The banner carries no figures.
+
+After pushing, open `https://github.com/matematicsolutions` and check the profile renders.
 
 ## Writing rules (CRITICAL)
 
@@ -55,10 +65,11 @@ No compilation. "Test" = push, open `https://github.com/matematicsolutions`, and
 
 ## Related repos (keep in sync)
 
-Product repos - Patron, skill hubs, first-wave connectors (PL + EU level). The full 41-connector eu-legal-mcp fleet (Europe, Americas, Asia-Pacific) is NOT duplicated row-by-row here; the source of truth for the full list is `profile/README.md`.
+Product repos - Patron, Repertorium docs, skill hubs, first-wave connectors (PL + EU level). The full connector list is NOT duplicated here; the source of truth for it is `profile/README.md`, and for counts `ecosystem.json`.
 
 | Repo | Licence | Status | Governance file |
 |---|---|---|---|
+| [repertorium](https://github.com/matematicsolutions/repertorium) | CC BY 4.0 (docs) | interface documentation of a hosted service | no |
 | [patron](https://github.com/matematicsolutions/patron) | AGPL-3.0 | active, 9 language editions | AGENTS.md |
 | [lpm-pl](https://github.com/matematicsolutions/lpm-pl) | Apache 2.0 | v0.2.0-alpha | AGENTS.md |
 | [matematic-contract-review-pl](https://github.com/matematicsolutions/matematic-contract-review-pl) | Apache 2.0 | v0.1.0-alpha | AGENTS.md |
@@ -67,7 +78,7 @@ Product repos - Patron, skill hubs, first-wave connectors (PL + EU level). The f
 | [matematic-legal-verify-pl](https://github.com/matematicsolutions/matematic-legal-verify-pl) | Apache 2.0 | v0.4.0-alpha | AGENTS.md |
 | [matematic-pomoc-prawna-pl](https://github.com/matematicsolutions/matematic-pomoc-prawna-pl) | Apache 2.0 | v0.1.0-alpha | CLAUDE.md |
 | [praxis](https://github.com/matematicsolutions/praxis) | CC BY-SA 4.0 | active | AGENTS.md |
-| [awesome-matematic-skills-pl](https://github.com/matematicsolutions/awesome-matematic-skills-pl) | MIT | 41 skills + curated | AGENTS.md |
+| [awesome-matematic-skills-pl](https://github.com/matematicsolutions/awesome-matematic-skills-pl) | MIT | 45 skills + curated | AGENTS.md |
 | [awesome-matematic-skills-en](https://github.com/matematicsolutions/awesome-matematic-skills-en) | MIT | 18 skills + curated | no |
 | [mcp-saos](https://github.com/matematicsolutions/mcp-saos) | MIT | stable | AGENTS.md |
 | [mcp-nsa](https://github.com/matematicsolutions/mcp-nsa) | MIT | stable | AGENTS.md |
