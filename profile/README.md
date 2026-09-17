@@ -11,7 +11,7 @@
 **[Repertorium](https://github.com/matematicsolutions/repertorium)** · legal knowledge infrastructure &nbsp;|&nbsp; **[PATRON](https://github.com/matematicsolutions/patron)** · local-first legal workspace<br>
 **[Boutique](https://matematicsolutions.com/en/boutique)** · connectors and skills &nbsp;|&nbsp; **MateMatic** · architecture, audit and deployment
 
-[Website](https://matematicsolutions.com/en/) · [Where your data is](https://matematicsolutions.com/en/where-your-data-is)
+[Website](https://matematicsolutions.com/en/) · [Hugging Face](https://huggingface.co/matematicsolutions) · [Where your data is](https://matematicsolutions.com/en/where-your-data-is)
 
 </div>
 
