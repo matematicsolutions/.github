@@ -86,7 +86,7 @@ def main():
 
     linked = set(re.findall(rf"github\.com/{ORG}/([\w.-]+)", readme))
     connectors = sorted(r for r in linked if r.endswith("-mcp") or r.startswith("mcp-"))
-    expected = metrics.get("connectors", {}).get("value")
+    expected = metrics.get("connectors_total", {}).get("value")
     if not connectors:
         results.append(("BLOCK", "no connector repositories linked from profile"))
     elif len(connectors) == expected:

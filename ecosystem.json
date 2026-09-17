@@ -1,6 +1,6 @@
 {
   "$comment": "Source of truth for the numbers shown in profile/README.md. Every figure carries its definition and where it is measured. Change a number here first, then run: python scripts/check_ecosystem.py",
-  "as_of": "2026-09-17",
+  "updated_at": "2026-09-17",
   "layers": {
     "repertorium": {
       "role": "legal knowledge infrastructure",
@@ -45,27 +45,27 @@
       "definition": "links between Polish and EU documents in the PL-EU bridge",
       "measured_in": "internal build report (PL-EU bridge)"
     },
-    "connectors": {
+    "connectors_total": {
       "value": 45,
       "definition": "MCP connector entries in the Boutique catalogue: 44 connectors to legal sources plus boutique-mcp, the catalogue itself",
       "measured_in": "catalog.json counts.konektor"
     },
-    "jurisdictions": {
+    "jurisdictions_covered": {
       "value": 35,
       "definition": "distinct jurisdictions covered by connectors: 34 countries plus EU law. legalize-mcp alone spans 32 jurisdictions, most of them also covered by a national connector, so it adds no separate count",
       "measured_in": "catalog.json entries[type=konektor].jurisdiction, excluding the meta labels 'Whole fleet' and '32 jurisdictions'"
     },
-    "skills_catalogue": {
+    "skills_public": {
       "value": 54,
       "definition": "skills published as downloadable cards in the Boutique catalogue (Polish and English)",
       "measured_in": "catalog.json counts.skill"
     },
-    "skills_hub_pl": {
+    "skills_pl": {
       "value": 45,
       "definition": "SKILL.md files in awesome-matematic-skills-pl, including the developer bundle dev-mcp",
       "measured_in": "find awesome-matematic-skills-pl -path '*/skills/*/SKILL.md'"
     },
-    "skills_hub_en": {
+    "skills_en": {
       "value": 18,
       "definition": "SKILL.md files in awesome-matematic-skills-en",
       "measured_in": "find awesome-matematic-skills-en -path '*/skills/*/SKILL.md'"
