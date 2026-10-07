@@ -63,7 +63,7 @@ Claims are cheap; these are the parts you can inspect.
 |---|---|
 | Repertorium corpus | 1,492,530 Polish and 236,944 EU documents · 1,443,748 PL-EU links |
 | Connectors | 45 MCP connectors · 35 jurisdictions (34 countries and EU law) |
-| Skills | 54 in the Boutique catalogue · hubs: [45 PL](https://github.com/matematicsolutions/awesome-matematic-skills-pl), [18 EN](https://github.com/matematicsolutions/awesome-matematic-skills-en) |
+| Skills | 60 in the Boutique catalogue · hubs: [48 PL](https://github.com/matematicsolutions/awesome-matematic-skills-pl), [22 EN](https://github.com/matematicsolutions/awesome-matematic-skills-en) |
 | PATRON | 9 installer editions · 7 Polish and EU sources bundled |
 
 ## Connectors
